@@ -12,6 +12,10 @@ namespace Finel_Project
 {
     public partial class EventSeatingManager : Form
     {
+        /*connection string
+         Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Public\Finel Project\Finel Project.accdb" 
+         */
+
         public EventSeatingManager()
         {
             InitializeComponent();
