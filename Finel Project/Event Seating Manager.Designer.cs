@@ -34,7 +34,7 @@
             this.btnSeating = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnCostEvaluetion = new System.Windows.Forms.Button();
-            this.btnEditGueasList = new System.Windows.Forms.Button();
+            this.btnGueasList = new System.Windows.Forms.Button();
             this.lblEventSeatingManager = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.btnSignIn.TabIndex = 38;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnCreateAccount
             // 
@@ -70,6 +71,7 @@
             this.btnCreateAccount.TabIndex = 37;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnSeating
             // 
@@ -82,6 +84,7 @@
             this.btnSeating.TabIndex = 36;
             this.btnSeating.Text = "Seating";
             this.btnSeating.UseVisualStyleBackColor = false;
+            this.btnSeating.Click += new System.EventHandler(this.btnSeating_Click);
             // 
             // btnStatistics
             // 
@@ -94,6 +97,7 @@
             this.btnStatistics.TabIndex = 35;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = false;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
             // btnCostEvaluetion
             // 
@@ -106,18 +110,20 @@
             this.btnCostEvaluetion.TabIndex = 34;
             this.btnCostEvaluetion.Text = "Cost Evaluation";
             this.btnCostEvaluetion.UseVisualStyleBackColor = false;
+            this.btnCostEvaluetion.Click += new System.EventHandler(this.btnCostEvaluetion_Click);
             // 
-            // btnEditGueasList
+            // btnGueasList
             // 
-            this.btnEditGueasList.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnEditGueasList.Enabled = false;
-            this.btnEditGueasList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnEditGueasList.Location = new System.Drawing.Point(7, 239);
-            this.btnEditGueasList.Name = "btnEditGueasList";
-            this.btnEditGueasList.Size = new System.Drawing.Size(157, 123);
-            this.btnEditGueasList.TabIndex = 33;
-            this.btnEditGueasList.Text = "Edit Guest List";
-            this.btnEditGueasList.UseVisualStyleBackColor = false;
+            this.btnGueasList.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnGueasList.Enabled = false;
+            this.btnGueasList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnGueasList.Location = new System.Drawing.Point(7, 239);
+            this.btnGueasList.Name = "btnGueasList";
+            this.btnGueasList.Size = new System.Drawing.Size(157, 123);
+            this.btnGueasList.TabIndex = 33;
+            this.btnGueasList.Text = "Guest List";
+            this.btnGueasList.UseVisualStyleBackColor = false;
+            this.btnGueasList.Click += new System.EventHandler(this.btnGueasList_Click);
             // 
             // lblEventSeatingManager
             // 
@@ -142,7 +148,7 @@
             this.Controls.Add(this.btnSeating);
             this.Controls.Add(this.btnStatistics);
             this.Controls.Add(this.btnCostEvaluetion);
-            this.Controls.Add(this.btnEditGueasList);
+            this.Controls.Add(this.btnGueasList);
             this.Controls.Add(this.lblEventSeatingManager);
             this.Name = "EventSeatingManager";
             this.Text = "Event Seating Manager";
@@ -158,7 +164,7 @@
         private System.Windows.Forms.Button btnSeating;
         private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.Button btnCostEvaluetion;
-        private System.Windows.Forms.Button btnEditGueasList;
+        private System.Windows.Forms.Button btnGueasList;
         private System.Windows.Forms.Label lblEventSeatingManager;
     }
 }

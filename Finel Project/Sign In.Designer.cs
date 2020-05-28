@@ -1,6 +1,6 @@
 ﻿namespace Finel_Project
 {
-    partial class Form3
+    partial class SignIn
     {
         /// <summary>
         /// Required designer variable.
@@ -109,6 +109,7 @@
             this.btnBack.TabIndex = 50;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblSignIn
             // 
@@ -133,7 +134,7 @@
             this.lblRegister.Text = "Please Register To The System:";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form3
+            // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -147,7 +148,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblSignIn);
             this.Controls.Add(this.lblRegister);
-            this.Name = "Form3";
+            this.Name = "SignIn";
             this.Text = "Sign In";
             this.ResumeLayout(false);
             this.PerformLayout();

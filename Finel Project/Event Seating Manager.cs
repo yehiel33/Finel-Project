@@ -17,6 +17,52 @@ namespace Finel_Project
             InitializeComponent();
         }
 
-        
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            //הסתרת החלון הנוכחי ומעבר לחלון התחברות
+            this.Hide(); 
+            SignIn signin= new SignIn();
+            signin.ShowDialog();
+        }
+
+        private void btnCreateAccount_Click(object sender, EventArgs e)
+        {
+            //הסתרת החלון הנוכחי ומעבר לחלון יצירת משתמש
+            this.Hide();
+            CreateAccount createaccount= new CreateAccount();
+            createaccount.ShowDialog();
+        }
+
+        private void btnGueasList_Click(object sender, EventArgs e)
+        {
+            //הסתרת החלון הנוכחי ומעבר לחלון רשימת אורחים
+            this.Hide();
+            GuestList guestlist = new GuestList();
+            guestlist.ShowDialog();
+        }
+
+        private void btnCostEvaluetion_Click(object sender, EventArgs e)
+        {
+            //הסתרת החלון הנוכחי ומעבר לחלון אומדן עלויות
+            this.Hide();
+            CostEvaluation costevaluation = new CostEvaluation();
+            costevaluation.ShowDialog();
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            //הסתרת החלון הנוכחי ומעבר לחלון סטטיסטיקה
+            this.Hide();
+            Statistics statistics = new Statistics();
+            statistics.ShowDialog();
+        }
+
+        private void btnSeating_Click(object sender, EventArgs e)
+        {
+            //הסתרת החלון הנוכחי ומעבר לחלון הושבה
+            this.Hide();
+            Seating seating = new Seating();
+            seating.ShowDialog();
+        }
     }
 }

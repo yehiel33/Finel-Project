@@ -17,5 +17,12 @@ namespace Finel_Project
             InitializeComponent();
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            //חזרה לחלון הראשי
+            this.Hide();
+            EventSeatingManager eventseatingmanager = new EventSeatingManager();
+            eventseatingmanager.ShowDialog();
+        }
     }     
 }

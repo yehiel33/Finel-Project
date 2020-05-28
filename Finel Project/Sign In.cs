@@ -10,13 +10,19 @@ using System.Windows.Forms;
 
 namespace Finel_Project
 {
-    public partial class Form3 : Form
+    public partial class SignIn : Form
     {
-        public Form3()
+        public SignIn()
         {
             InitializeComponent();
         }
 
-        
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            //חזרה לחלון הראשי
+            this.Hide();
+            EventSeatingManager eventseatingmanager = new EventSeatingManager();
+            eventseatingmanager.ShowDialog();
+        }
     }
 }
