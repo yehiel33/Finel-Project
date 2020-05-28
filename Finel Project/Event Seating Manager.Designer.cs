@@ -42,7 +42,7 @@
             // 
             this.lblWelcome.BackColor = System.Drawing.Color.DarkCyan;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblWelcome.Location = new System.Drawing.Point(9, 83);
+            this.lblWelcome.Location = new System.Drawing.Point(48, 94);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(329, 50);
             this.lblWelcome.TabIndex = 39;
@@ -53,7 +53,7 @@
             // 
             this.btnSignIn.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnSignIn.Location = new System.Drawing.Point(8, 160);
+            this.btnSignIn.Location = new System.Drawing.Point(47, 171);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(157, 44);
             this.btnSignIn.TabIndex = 38;
@@ -65,7 +65,7 @@
             // 
             this.btnCreateAccount.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnCreateAccount.Location = new System.Drawing.Point(181, 160);
+            this.btnCreateAccount.Location = new System.Drawing.Point(220, 171);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(157, 44);
             this.btnCreateAccount.TabIndex = 37;
@@ -77,7 +77,7 @@
             // 
             this.btnSeating.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnSeating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnSeating.Location = new System.Drawing.Point(180, 368);
+            this.btnSeating.Location = new System.Drawing.Point(219, 379);
             this.btnSeating.Name = "btnSeating";
             this.btnSeating.Size = new System.Drawing.Size(157, 123);
             this.btnSeating.TabIndex = 36;
@@ -89,7 +89,7 @@
             // 
             this.btnStatistics.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnStatistics.Location = new System.Drawing.Point(7, 368);
+            this.btnStatistics.Location = new System.Drawing.Point(46, 379);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(157, 123);
             this.btnStatistics.TabIndex = 35;
@@ -101,7 +101,7 @@
             // 
             this.btnCostEvaluetion.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCostEvaluetion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnCostEvaluetion.Location = new System.Drawing.Point(180, 239);
+            this.btnCostEvaluetion.Location = new System.Drawing.Point(219, 250);
             this.btnCostEvaluetion.Name = "btnCostEvaluetion";
             this.btnCostEvaluetion.Size = new System.Drawing.Size(158, 123);
             this.btnCostEvaluetion.TabIndex = 34;
@@ -113,7 +113,7 @@
             // 
             this.btnGueasList.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnGueasList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnGueasList.Location = new System.Drawing.Point(7, 239);
+            this.btnGueasList.Location = new System.Drawing.Point(46, 250);
             this.btnGueasList.Name = "btnGueasList";
             this.btnGueasList.Size = new System.Drawing.Size(157, 123);
             this.btnGueasList.TabIndex = 33;
@@ -126,7 +126,7 @@
             this.lblEventSeatingManager.BackColor = System.Drawing.Color.DarkSlateGray;
             this.lblEventSeatingManager.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblEventSeatingManager.ForeColor = System.Drawing.Color.White;
-            this.lblEventSeatingManager.Location = new System.Drawing.Point(12, 9);
+            this.lblEventSeatingManager.Location = new System.Drawing.Point(51, 20);
             this.lblEventSeatingManager.Name = "lblEventSeatingManager";
             this.lblEventSeatingManager.Size = new System.Drawing.Size(326, 57);
             this.lblEventSeatingManager.TabIndex = 32;
@@ -137,7 +137,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 516);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(441, 546);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.btnCreateAccount);
