@@ -52,7 +52,7 @@ namespace Finel_Project
                 try
                 {
                     //הוספת שורה לדטה סט שתכיל את התוכן של תיבות הטקסט
-                    finel_ProjectDataSet.EVENT_OWNERS.AddEVENT_OWNERSRow(txtFirstName.Text, txtLastName.Text, txtEventName.Text, txtEventType.Text, txtUserName.Text, txtPassword.Text);
+                    finel_ProjectDataSet.EVENT_OWNERS.AddEVENT_OWNERSRow(txtFirstName.Text, txtLastName.Text, txtEventName.Text, cbEventType.Text, txtUserName.Text, txtPassword.Text);
                     //פקודה זו מעדכנת את הדטה סט
                     eVENT_OWNERSTableAdapter.Update(finel_ProjectDataSet);
                     //סיום עריכה
@@ -60,13 +60,12 @@ namespace Finel_Project
                     // מעדכן את בסיס הנתונים מול הדטה סט
                     tableAdapterManager.UpdateAll(finel_ProjectDataSet);
                     //ניקויי שדות
-                    txtFirstName.Text = txtLastName.Text = txtEventName.Text = txtEventType.Text = txtUserName.Text = txtPassword.Text = "";
+                    txtFirstName.Text = txtLastName.Text = txtEventName.Text = cbEventType.Text = txtUserName.Text = txtPassword.Text = "";
                     MessageBox.Show("Registration completed successfully!");
 
                     this.Hide();
-                    EventSeatingManager eventseatingmanager = new EventSeatingManager();
-                    eventseatingmanager.ShowDialog();
-
+                    SignIn signin = new SignIn();
+                    signin.ShowDialog();
 
                 }
                 catch (Exception err)

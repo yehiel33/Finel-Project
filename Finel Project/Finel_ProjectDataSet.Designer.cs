@@ -353,13 +353,13 @@ namespace Finel_Project {
             
             private global::System.Data.DataColumn columnOwner_Last_Name;
             
-            private global::System.Data.DataColumn columnUser_Name;
-            
-            private global::System.Data.DataColumn columnPassword;
-            
             private global::System.Data.DataColumn columnEvent_Name;
             
             private global::System.Data.DataColumn columnEvent_Type;
+            
+            private global::System.Data.DataColumn columnUser_Name;
+            
+            private global::System.Data.DataColumn columnPassword;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -412,22 +412,6 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn User_NameColumn {
-                get {
-                    return this.columnUser_Name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PasswordColumn {
-                get {
-                    return this.columnPassword;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Event_NameColumn {
                 get {
                     return this.columnEvent_Name;
@@ -439,6 +423,22 @@ namespace Finel_Project {
             public global::System.Data.DataColumn Event_TypeColumn {
                 get {
                     return this.columnEvent_Type;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn User_NameColumn {
+                get {
+                    return this.columnUser_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PasswordColumn {
+                get {
+                    return this.columnPassword;
                 }
             }
             
@@ -479,15 +479,15 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EVENT_OWNERSRow AddEVENT_OWNERSRow(string Owner_First_Name, string Owner_Last_Name, string User_Name, string Password, string Event_Name, string Event_Type) {
+            public EVENT_OWNERSRow AddEVENT_OWNERSRow(string Owner_First_Name, string Owner_Last_Name, string Event_Name, string Event_Type, string User_Name, string Password) {
                 EVENT_OWNERSRow rowEVENT_OWNERSRow = ((EVENT_OWNERSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Owner_First_Name,
                         Owner_Last_Name,
-                        User_Name,
-                        Password,
                         Event_Name,
-                        Event_Type};
+                        Event_Type,
+                        User_Name,
+                        Password};
                 rowEVENT_OWNERSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEVENT_OWNERSRow);
                 return rowEVENT_OWNERSRow;
@@ -519,10 +519,10 @@ namespace Finel_Project {
             internal void InitVars() {
                 this.columnOwner_First_Name = base.Columns["Owner First Name"];
                 this.columnOwner_Last_Name = base.Columns["Owner Last Name"];
-                this.columnUser_Name = base.Columns["User Name"];
-                this.columnPassword = base.Columns["Password"];
                 this.columnEvent_Name = base.Columns["Event Name"];
                 this.columnEvent_Type = base.Columns["Event Type"];
+                this.columnUser_Name = base.Columns["User Name"];
+                this.columnPassword = base.Columns["Password"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -532,24 +532,23 @@ namespace Finel_Project {
                 base.Columns.Add(this.columnOwner_First_Name);
                 this.columnOwner_Last_Name = new global::System.Data.DataColumn("Owner Last Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOwner_Last_Name);
-                this.columnUser_Name = new global::System.Data.DataColumn("User Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUser_Name);
-                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPassword);
                 this.columnEvent_Name = new global::System.Data.DataColumn("Event Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEvent_Name);
                 this.columnEvent_Type = new global::System.Data.DataColumn("Event Type", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEvent_Type);
+                this.columnUser_Name = new global::System.Data.DataColumn("User Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUser_Name);
+                this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPassword);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUser_Name}, true));
                 this.columnOwner_First_Name.MaxLength = 10;
                 this.columnOwner_Last_Name.MaxLength = 10;
+                this.columnEvent_Name.MaxLength = 10;
+                this.columnEvent_Type.MaxLength = 30;
                 this.columnUser_Name.AllowDBNull = false;
                 this.columnUser_Name.Unique = true;
-                this.columnUser_Name.MaxLength = 15;
-                this.columnPassword.MaxLength = 10;
-                this.columnEvent_Name.MaxLength = 30;
-                this.columnEvent_Type.MaxLength = 10;
+                this.columnUser_Name.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1432,33 +1431,6 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string User_Name {
-                get {
-                    return ((string)(this[this.tableEVENT_OWNERS.User_NameColumn]));
-                }
-                set {
-                    this[this.tableEVENT_OWNERS.User_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Password {
-                get {
-                    try {
-                        return ((string)(this[this.tableEVENT_OWNERS.PasswordColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'EVENT_OWNERS\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEVENT_OWNERS.PasswordColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Event_Name {
                 get {
                     try {
@@ -1491,6 +1463,33 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string User_Name {
+                get {
+                    return ((string)(this[this.tableEVENT_OWNERS.User_NameColumn]));
+                }
+                set {
+                    this[this.tableEVENT_OWNERS.User_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Password {
+                get {
+                    try {
+                        return ((string)(this[this.tableEVENT_OWNERS.PasswordColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'EVENT_OWNERS\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEVENT_OWNERS.PasswordColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsOwner_First_NameNull() {
                 return this.IsNull(this.tableEVENT_OWNERS.Owner_First_NameColumn);
             }
@@ -1515,18 +1514,6 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPasswordNull() {
-                return this.IsNull(this.tableEVENT_OWNERS.PasswordColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPasswordNull() {
-                this[this.tableEVENT_OWNERS.PasswordColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEvent_NameNull() {
                 return this.IsNull(this.tableEVENT_OWNERS.Event_NameColumn);
             }
@@ -1547,6 +1534,18 @@ namespace Finel_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEvent_TypeNull() {
                 this[this.tableEVENT_OWNERS.Event_TypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPasswordNull() {
+                return this.IsNull(this.tableEVENT_OWNERS.PasswordColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPasswordNull() {
+                this[this.tableEVENT_OWNERS.PasswordColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2195,58 +2194,57 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
             tableMapping.DataSetTable = "EVENT_OWNERS";
             tableMapping.ColumnMappings.Add("Owner First Name", "Owner First Name");
             tableMapping.ColumnMappings.Add("Owner Last Name", "Owner Last Name");
-            tableMapping.ColumnMappings.Add("User Name", "User Name");
-            tableMapping.ColumnMappings.Add("Password", "Password");
-            tableMapping.ColumnMappings.Add("Event Name", "Event Name");
-            tableMapping.ColumnMappings.Add("Event Type", "Event Type");
+            tableMapping.ColumnMappings.Add("Password", "Event Name");
+            tableMapping.ColumnMappings.Add("Event Name", "Event Type");
+            tableMapping.ColumnMappings.Add("Event Type", "User Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `EVENT_OWNERS` WHERE (((? = 1 AND `Owner First Name` IS NULL) OR (`Owner First Name` = ?)) AND ((? = 1 AND `Owner Last Name` IS NULL) OR (`Owner Last Name` = ?)) AND (`User Name` = ?) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Event Name` IS NULL) OR (`Event Name` = ?)) AND ((? = 1 AND `Event Type` IS NULL) OR (`Event Type` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `EVENT_OWNERS` WHERE (((? = 1 AND `Owner First Name` IS NULL) OR (`Owner First Name` = ?)) AND ((? = 1 AND `Owner Last Name` IS NULL) OR (`Owner Last Name` = ?)) AND ((? = 1 AND `Event Name` IS NULL) OR (`Event Name` = ?)) AND ((? = 1 AND `Event Type` IS NULL) OR (`Event Type` = ?)) AND (`User Name` = ?) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Owner_First_Name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner First Name", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Owner_First_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner First Name", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Owner_Last_Name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner Last Name", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Owner_Last_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner Last Name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Event_Name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Name", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Event_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Name", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Event_Type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Type", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Event_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Type", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `EVENT_OWNERS` (`Owner First Name`, `Owner Last Name`, `User Name`, `" +
-                "Password`, `Event Name`, `Event Type`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `EVENT_OWNERS` (`Owner First Name`, `Owner Last Name`, `Event Name`, " +
+                "`Event Type`, `User Name`, `Password`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Owner_First_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner First Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Owner_Last_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner Last Name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Event_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Event_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Type", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `EVENT_OWNERS` SET `Owner First Name` = ?, `Owner Last Name` = ?, `User Name` = ?, `Password` = ?, `Event Name` = ?, `Event Type` = ? WHERE (((? = 1 AND `Owner First Name` IS NULL) OR (`Owner First Name` = ?)) AND ((? = 1 AND `Owner Last Name` IS NULL) OR (`Owner Last Name` = ?)) AND (`User Name` = ?) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)) AND ((? = 1 AND `Event Name` IS NULL) OR (`Event Name` = ?)) AND ((? = 1 AND `Event Type` IS NULL) OR (`Event Type` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `EVENT_OWNERS` SET `Owner First Name` = ?, `Owner Last Name` = ?, `Event Name` = ?, `Event Type` = ?, `User Name` = ?, `Password` = ? WHERE (((? = 1 AND `Owner First Name` IS NULL) OR (`Owner First Name` = ?)) AND ((? = 1 AND `Owner Last Name` IS NULL) OR (`Owner Last Name` = ?)) AND ((? = 1 AND `Event Name` IS NULL) OR (`Event Name` = ?)) AND ((? = 1 AND `Event Type` IS NULL) OR (`Event Type` = ?)) AND (`User Name` = ?) AND ((? = 1 AND `Password` IS NULL) OR (`Password` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Owner_First_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner First Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Owner_Last_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner Last Name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Event_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Name", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Event_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Type", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Owner_First_Name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner First Name", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Owner_First_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner First Name", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Owner_Last_Name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner Last Name", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Owner_Last_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Owner Last Name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Event_Name", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Name", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Event_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Name", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Event_Type", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Type", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Event_Type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Event Type", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_User_Name", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "User Name", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2262,8 +2260,8 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Owner First Name], [Owner Last Name], [User Name], [Password], [Event Nam" +
-                "e], [Event Type] FROM EVENT_OWNERS";
+            this._commandCollection[0].CommandText = "SELECT [Owner First Name], [Owner Last Name], [Event Name], [Event Type], [Passwo" +
+                "rd] FROM EVENT_OWNERS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2324,7 +2322,7 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_User_Name, string Original_Password, string Original_Event_Name, string Original_Event_Type) {
+        public virtual int Delete(string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_Event_Name, string Original_Event_Type, string Original_User_Name, string Original_Password) {
             if ((Original_Owner_First_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Owner_First_Name");
             }
@@ -2339,32 +2337,32 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Owner_Last_Name));
             }
-            if ((Original_User_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_User_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_User_Name));
-            }
-            if ((Original_Password == null)) {
-                throw new global::System.ArgumentNullException("Original_Password");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Password));
-            }
             if ((Original_Event_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Event_Name");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Event_Name));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Event_Name));
             }
             if ((Original_Event_Type == null)) {
                 throw new global::System.ArgumentNullException("Original_Event_Type");
             }
             else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Event_Type));
+            }
+            if ((Original_User_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_User_Name");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_User_Name));
+            }
+            if ((Original_Password == null)) {
+                throw new global::System.ArgumentNullException("Original_Password");
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Event_Type));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Password));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2386,7 +2384,7 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Owner_First_Name, string Owner_Last_Name, string User_Name, string Password, string Event_Name, string Event_Type) {
+        public virtual int Insert(string Owner_First_Name, string Owner_Last_Name, string Event_Name, string Event_Type, string User_Name, string Password) {
             if ((Owner_First_Name == null)) {
                 throw new global::System.ArgumentNullException("Owner_First_Name");
             }
@@ -2399,29 +2397,29 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Owner_Last_Name));
             }
-            if ((User_Name == null)) {
-                throw new global::System.ArgumentNullException("User_Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(User_Name));
-            }
-            if ((Password == null)) {
-                throw new global::System.ArgumentNullException("Password");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Password));
-            }
             if ((Event_Name == null)) {
                 throw new global::System.ArgumentNullException("Event_Name");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Event_Name));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Event_Name));
             }
             if ((Event_Type == null)) {
                 throw new global::System.ArgumentNullException("Event_Type");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Event_Type));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Event_Type));
+            }
+            if ((User_Name == null)) {
+                throw new global::System.ArgumentNullException("User_Name");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(User_Name));
+            }
+            if ((Password == null)) {
+                throw new global::System.ArgumentNullException("Password");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Password));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2443,7 +2441,7 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Owner_First_Name, string Owner_Last_Name, string User_Name, string Password, string Event_Name, string Event_Type, string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_User_Name, string Original_Password, string Original_Event_Name, string Original_Event_Type) {
+        public virtual int Update(string Owner_First_Name, string Owner_Last_Name, string Event_Name, string Event_Type, string User_Name, string Password, string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_Event_Name, string Original_Event_Type, string Original_User_Name, string Original_Password) {
             if ((Owner_First_Name == null)) {
                 throw new global::System.ArgumentNullException("Owner_First_Name");
             }
@@ -2456,29 +2454,29 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Owner_Last_Name));
             }
-            if ((User_Name == null)) {
-                throw new global::System.ArgumentNullException("User_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(User_Name));
-            }
-            if ((Password == null)) {
-                throw new global::System.ArgumentNullException("Password");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Password));
-            }
             if ((Event_Name == null)) {
                 throw new global::System.ArgumentNullException("Event_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Event_Name));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Event_Name));
             }
             if ((Event_Type == null)) {
                 throw new global::System.ArgumentNullException("Event_Type");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Event_Type));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Event_Type));
+            }
+            if ((User_Name == null)) {
+                throw new global::System.ArgumentNullException("User_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(User_Name));
+            }
+            if ((Password == null)) {
+                throw new global::System.ArgumentNullException("Password");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Password));
             }
             if ((Original_Owner_First_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Owner_First_Name");
@@ -2494,32 +2492,32 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Owner_Last_Name));
             }
-            if ((Original_User_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_User_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_User_Name));
-            }
-            if ((Original_Password == null)) {
-                throw new global::System.ArgumentNullException("Original_Password");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Password));
-            }
             if ((Original_Event_Name == null)) {
                 throw new global::System.ArgumentNullException("Original_Event_Name");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Event_Name));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Event_Name));
             }
             if ((Original_Event_Type == null)) {
                 throw new global::System.ArgumentNullException("Original_Event_Type");
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Event_Type));
+            }
+            if ((Original_User_Name == null)) {
+                throw new global::System.ArgumentNullException("Original_User_Name");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_User_Name));
+            }
+            if ((Original_Password == null)) {
+                throw new global::System.ArgumentNullException("Original_Password");
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Event_Type));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Password));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2541,8 +2539,8 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Owner_First_Name, string Owner_Last_Name, string Password, string Event_Name, string Event_Type, string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_User_Name, string Original_Password, string Original_Event_Name, string Original_Event_Type) {
-            return this.Update(Owner_First_Name, Owner_Last_Name, Original_User_Name, Password, Event_Name, Event_Type, Original_Owner_First_Name, Original_Owner_Last_Name, Original_User_Name, Original_Password, Original_Event_Name, Original_Event_Type);
+        public virtual int Update(string Owner_First_Name, string Owner_Last_Name, string Event_Name, string Event_Type, string Password, string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_Event_Name, string Original_Event_Type, string Original_User_Name, string Original_Password) {
+            return this.Update(Owner_First_Name, Owner_Last_Name, Event_Name, Event_Type, Original_User_Name, Password, Original_Owner_First_Name, Original_Owner_Last_Name, Original_Event_Name, Original_Event_Type, Original_User_Name, Original_Password);
         }
     }
     
@@ -3695,15 +3693,6 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(Finel_ProjectDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._eVENT_OWNERSTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.EVENT_OWNERS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._eVENT_OWNERSTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._gUEST_LISTTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.GUEST_LIST.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -3722,6 +3711,15 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._eVENT_OWNERSTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.EVENT_OWNERS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._eVENT_OWNERSTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -3732,14 +3730,6 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(Finel_ProjectDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._eVENT_OWNERSTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.EVENT_OWNERS.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._eVENT_OWNERSTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._gUEST_LISTTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.GUEST_LIST.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -3756,6 +3746,14 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._eVENT_OWNERSTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.EVENT_OWNERS.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._eVENT_OWNERSTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -3766,6 +3764,14 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(Finel_ProjectDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._eVENT_OWNERSTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.EVENT_OWNERS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._eVENT_OWNERSTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._sUPPLIERSTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.SUPPLIERS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -3779,14 +3785,6 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._gUEST_LISTTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._eVENT_OWNERSTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.EVENT_OWNERS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._eVENT_OWNERSTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

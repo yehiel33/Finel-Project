@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtEventType = new System.Windows.Forms.TextBox();
             this.lblEventType = new System.Windows.Forms.Label();
             this.txtEventName = new System.Windows.Forms.TextBox();
             this.lblEventName = new System.Windows.Forms.Label();
@@ -46,22 +45,14 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblCreateAccount = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
-            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
+            this.cbEventType = new System.Windows.Forms.ComboBox();
             this.eVENT_OWNERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
             this.eVENT_OWNERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
             this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtEventType
-            // 
-            this.txtEventType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "Event Type", true));
-            this.txtEventType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtEventType.Location = new System.Drawing.Point(260, 289);
-            this.txtEventType.Name = "txtEventType";
-            this.txtEventType.Size = new System.Drawing.Size(246, 30);
-            this.txtEventType.TabIndex = 4;
             // 
             // lblEventType
             // 
@@ -232,15 +223,30 @@
             this.lblRegister.Text = "Please Register To The System:";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // finel_ProjectDataSet
+            // cbEventType
             // 
-            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
-            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cbEventType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.eVENT_OWNERSBindingSource, "Event Type", true));
+            this.cbEventType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.cbEventType.FormattingEnabled = true;
+            this.cbEventType.Items.AddRange(new object[] {
+            "בר מצווה",
+            "חתונה",
+            "ברית ",
+            "יום הולדת"});
+            this.cbEventType.Location = new System.Drawing.Point(260, 289);
+            this.cbEventType.Name = "cbEventType";
+            this.cbEventType.Size = new System.Drawing.Size(246, 30);
+            this.cbEventType.TabIndex = 4;
             // 
             // eVENT_OWNERSBindingSource
             // 
             this.eVENT_OWNERSBindingSource.DataMember = "EVENT_OWNERS";
             this.eVENT_OWNERSBindingSource.DataSource = this.finel_ProjectDataSet;
+            // 
+            // finel_ProjectDataSet
+            // 
+            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
+            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // eVENT_OWNERSTableAdapter
             // 
@@ -259,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 710);
-            this.Controls.Add(this.txtEventType);
+            this.Controls.Add(this.cbEventType);
             this.Controls.Add(this.lblEventType);
             this.Controls.Add(this.txtEventName);
             this.Controls.Add(this.lblEventName);
@@ -279,16 +285,14 @@
             this.Name = "CreateAccount";
             this.Text = "Create Account";
             this.Load += new System.EventHandler(this.CreateAccount_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtEventType;
         private System.Windows.Forms.Label lblEventType;
         private System.Windows.Forms.TextBox txtEventName;
         private System.Windows.Forms.Label lblEventName;
@@ -309,5 +313,6 @@
         private System.Windows.Forms.BindingSource eVENT_OWNERSBindingSource;
         private Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter eVENT_OWNERSTableAdapter;
         private Finel_ProjectDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ComboBox cbEventType;
     }
 }
