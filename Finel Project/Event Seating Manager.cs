@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Finel_Project
 {
-    public partial class Form6 : Form
+    public partial class EventSeatingManager : Form
     {
-        public Form6()
+        public EventSeatingManager()
         {
             InitializeComponent();
         }
+
+        
     }
 }

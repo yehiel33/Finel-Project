@@ -1,6 +1,6 @@
 ﻿namespace Finel_Project
 {
-    partial class Form5
+    partial class CostEvaluation
     {
         /// <summary>
         /// Required designer variable.
@@ -214,10 +214,10 @@
             this.lblCostEvaluation.Name = "lblCostEvaluation";
             this.lblCostEvaluation.Size = new System.Drawing.Size(441, 57);
             this.lblCostEvaluation.TabIndex = 38;
-            this.lblCostEvaluation.Text = "Cost Evaluation:";
+            this.lblCostEvaluation.Text = "Cost Evaluation";
             this.lblCostEvaluation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form5
+            // CostEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -239,8 +239,8 @@
             this.Controls.Add(this.lblVeganMealCost);
             this.Controls.Add(this.txtVeganMealCost);
             this.Controls.Add(this.lblCostEvaluation);
-            this.Name = "Form5";
-            this.Text = "Form5";
+            this.Name = "CostEvaluation";
+            this.Text = "Cost Evaluation";
             this.ResumeLayout(false);
             this.PerformLayout();
 

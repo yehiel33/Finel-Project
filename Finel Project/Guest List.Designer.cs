@@ -1,6 +1,6 @@
 ﻿namespace Finel_Project
 {
-    partial class Form4
+    partial class GuestList
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@
             this.btnShowAllGuests.Text = "Show All Guests";
             this.btnShowAllGuests.UseVisualStyleBackColor = false;
             // 
-            // Form4
+            // GuestList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,8 +110,8 @@
             this.Controls.Add(this.btnDeleteGuest);
             this.Controls.Add(this.btnShowAllGuests);
             this.Controls.Add(this.label1);
-            this.Name = "Form4";
-            this.Text = "Form4";
+            this.Name = "GuestList";
+            this.Text = "Guest List";
             this.ResumeLayout(false);
 
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finel_Project
 {
-    public partial class Form1 : Form
+    public partial class GuestList : Form
     {
-        public Form1()
+        public GuestList()
         {
             InitializeComponent();
         }

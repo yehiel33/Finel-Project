@@ -1,6 +1,6 @@
 ﻿namespace Finel_Project
 {
-    partial class Form6
+    partial class Statistics
     {
         /// <summary>
         /// Required designer variable.
@@ -39,14 +39,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "סטטיסטיקה";
             // 
-            // Form6
+            // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 553);
             this.Controls.Add(this.label1);
-            this.Name = "Form6";
-            this.Text = "Form6";
+            this.Name = "Statistics";
+            this.Text = "Statistics";
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,6 @@
 ﻿namespace Finel_Project
 {
-    partial class Form1
+    partial class EventSeatingManager
     {
         /// <summary>
         /// Required designer variable.
@@ -131,7 +131,7 @@
             this.lblEventSeatingManager.Text = "Event Seating Manager";
             this.lblEventSeatingManager.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // EventSeatingManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,8 +144,8 @@
             this.Controls.Add(this.btnCostEvaluetion);
             this.Controls.Add(this.btnEditGueasList);
             this.Controls.Add(this.lblEventSeatingManager);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "EventSeatingManager";
+            this.Text = "Event Seating Manager";
             this.ResumeLayout(false);
 
         }

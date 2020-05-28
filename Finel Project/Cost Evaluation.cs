@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finel_Project
 {
-    public partial class Form7 : Form
+    public partial class CostEvaluation : Form
     {
-        public Form7()
+        public CostEvaluation()
         {
             InitializeComponent();
         }

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Finel_Project
 {
-    public partial class Form4 : Form
+    public partial class CreateAccount : Form
     {
-        public Form4()
+        public CreateAccount()
         {
             InitializeComponent();
         }
-    }
+
+    }     
 }
