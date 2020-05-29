@@ -58,6 +58,9 @@
     <Compile Include="Create Account.Designer.cs">
       <DependentUpon>Create Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finel_ProjectDataSet.cs">
+      <DependentUpon>Finel_ProjectDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Finel_ProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
