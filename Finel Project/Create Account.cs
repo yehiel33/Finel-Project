@@ -19,6 +19,11 @@ namespace Finel_Project
             InitializeComponent();
         }
 
+        public void ClearText()//שיטה שמנקה את כל השדות
+        {
+            txtFirstName.Text = txtLastName.Text = txtEventName.Text = cbEventType.Text = txtUserName.Text = txtPassword.Text = "";
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             //חזרה לחלון הראשי
@@ -60,10 +65,11 @@ namespace Finel_Project
                     // מעדכן את בסיס הנתונים מול הדטה סט
                     tableAdapterManager.UpdateAll(finel_ProjectDataSet);
                     //ניקויי שדות
-                    txtFirstName.Text = txtLastName.Text = txtEventName.Text = cbEventType.Text = txtUserName.Text = txtPassword.Text = "";
+                    ClearText();
+
                     MessageBox.Show("Registration completed successfully!");
 
-                    this.Hide();
+                    this.Close();
                     SignIn signin = new SignIn();
                     signin.ShowDialog();
 
@@ -84,6 +90,11 @@ namespace Finel_Project
                 txtPassword.PasswordChar = (char)0;
             else
                 txtPassword.PasswordChar = '*'; 
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            txtUserName.Text = "";
         }
     }     
 }

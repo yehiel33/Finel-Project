@@ -495,13 +495,6 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EVENT_OWNERSRow FindByUser_Name(string User_Name) {
-                return ((EVENT_OWNERSRow)(this.Rows.Find(new object[] {
-                            User_Name})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 EVENT_OWNERSDataTable cln = ((EVENT_OWNERSDataTable)(base.Clone()));
                 cln.InitVars();
@@ -540,14 +533,11 @@ namespace Finel_Project {
                 base.Columns.Add(this.columnUser_Name);
                 this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassword);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnUser_Name}, true));
                 this.columnOwner_First_Name.MaxLength = 10;
                 this.columnOwner_Last_Name.MaxLength = 10;
                 this.columnEvent_Name.MaxLength = 10;
                 this.columnEvent_Type.MaxLength = 30;
                 this.columnUser_Name.AllowDBNull = false;
-                this.columnUser_Name.Unique = true;
                 this.columnUser_Name.MaxLength = 10;
                 this.columnPassword.AllowDBNull = false;
                 this.columnPassword.MaxLength = 10;
@@ -2519,14 +2509,6 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Owner_First_Name, string Owner_Last_Name, string Event_Name, string Event_Type, string Password, string Original_Owner_First_Name, string Original_Owner_Last_Name, string Original_Event_Name, string Original_Event_Type, string Original_User_Name, string Original_Password) {
-            return this.Update(Owner_First_Name, Owner_Last_Name, Event_Name, Event_Type, Original_User_Name, Password, Original_Owner_First_Name, Original_Owner_Last_Name, Original_Event_Name, Original_Event_Type, Original_User_Name, Original_Password);
         }
     }
     

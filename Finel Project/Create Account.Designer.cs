@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.lblEventType = new System.Windows.Forms.Label();
             this.txtEventName = new System.Windows.Forms.TextBox();
+            this.eVENT_OWNERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
             this.lblEventName = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.lblFirstName = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.lblCreateAccount = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
             this.cbEventType = new System.Windows.Forms.ComboBox();
-            this.eVENT_OWNERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
             this.eVENT_OWNERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
             this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).BeginInit();
@@ -67,12 +67,21 @@
             // 
             // txtEventName
             // 
-            this.txtEventName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "Event Name", true));
             this.txtEventName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtEventName.Location = new System.Drawing.Point(260, 241);
             this.txtEventName.Name = "txtEventName";
             this.txtEventName.Size = new System.Drawing.Size(246, 30);
             this.txtEventName.TabIndex = 3;
+            // 
+            // eVENT_OWNERSBindingSource
+            // 
+            this.eVENT_OWNERSBindingSource.DataMember = "EVENT_OWNERS";
+            this.eVENT_OWNERSBindingSource.DataSource = this.finel_ProjectDataSet;
+            // 
+            // finel_ProjectDataSet
+            // 
+            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
+            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblEventName
             // 
@@ -87,12 +96,12 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "Owner First Name", true));
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtFirstName.Location = new System.Drawing.Point(260, 147);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(246, 30);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // lblFirstName
             // 
@@ -107,7 +116,6 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "Owner Last Name", true));
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtLastName.Location = new System.Drawing.Point(260, 193);
             this.txtLastName.Name = "txtLastName";
@@ -161,7 +169,6 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "Password", true));
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtPassword.Location = new System.Drawing.Point(260, 381);
             this.txtPassword.Name = "txtPassword";
@@ -193,7 +200,6 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "User Name", true));
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtUserName.Location = new System.Drawing.Point(260, 335);
             this.txtUserName.Name = "txtUserName";
@@ -225,7 +231,6 @@
             // 
             // cbEventType
             // 
-            this.cbEventType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.eVENT_OWNERSBindingSource, "Event Type", true));
             this.cbEventType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.cbEventType.FormattingEnabled = true;
             this.cbEventType.Items.AddRange(new object[] {
@@ -237,16 +242,6 @@
             this.cbEventType.Name = "cbEventType";
             this.cbEventType.Size = new System.Drawing.Size(246, 30);
             this.cbEventType.TabIndex = 4;
-            // 
-            // eVENT_OWNERSBindingSource
-            // 
-            this.eVENT_OWNERSBindingSource.DataMember = "EVENT_OWNERS";
-            this.eVENT_OWNERSBindingSource.DataSource = this.finel_ProjectDataSet;
-            // 
-            // finel_ProjectDataSet
-            // 
-            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
-            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // eVENT_OWNERSTableAdapter
             // 

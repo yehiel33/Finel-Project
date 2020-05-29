@@ -28,15 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.cbShowPassword = new System.Windows.Forms.CheckBox();
-            this.btnCreateAcount = new System.Windows.Forms.Button();
+            this.btnSignIn = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblSignIn = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
+            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
+            this.eVENT_OWNERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eVENT_OWNERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
+            this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -88,17 +95,17 @@
             this.cbShowPassword.UseVisualStyleBackColor = true;
             this.cbShowPassword.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged);
             // 
-            // btnCreateAcount
+            // btnSignIn
             // 
-            this.btnCreateAcount.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnCreateAcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnCreateAcount.Location = new System.Drawing.Point(360, 265);
-            this.btnCreateAcount.Name = "btnCreateAcount";
-            this.btnCreateAcount.Size = new System.Drawing.Size(146, 57);
-            this.btnCreateAcount.TabIndex = 49;
-            this.btnCreateAcount.Text = "Create Acount";
-            this.btnCreateAcount.UseVisualStyleBackColor = false;
-            this.btnCreateAcount.Click += new System.EventHandler(this.btnCreateAcount_Click);
+            this.btnSignIn.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnSignIn.Location = new System.Drawing.Point(349, 265);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(157, 57);
+            this.btnSignIn.TabIndex = 49;
+            this.btnSignIn.Text = "Sign In";
+            this.btnSignIn.UseVisualStyleBackColor = false;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnBack
             // 
@@ -135,22 +142,47 @@
             this.lblRegister.Text = "Please Register To The System:";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // finel_ProjectDataSet
+            // 
+            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
+            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eVENT_OWNERSBindingSource
+            // 
+            this.eVENT_OWNERSBindingSource.DataMember = "EVENT_OWNERS";
+            this.eVENT_OWNERSBindingSource.DataSource = this.finel_ProjectDataSet;
+            // 
+            // eVENT_OWNERSTableAdapter
+            // 
+            this.eVENT_OWNERSTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EVENT_OWNERSTableAdapter = this.eVENT_OWNERSTableAdapter;
+            this.tableAdapterManager.GUEST_LISTTableAdapter = null;
+            this.tableAdapterManager.SUPPLIERSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 336);
+            this.ClientSize = new System.Drawing.Size(526, 484);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.cbShowPassword);
-            this.Controls.Add(this.btnCreateAcount);
+            this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblSignIn);
             this.Controls.Add(this.lblRegister);
             this.Name = "SignIn";
             this.Text = "Sign In";
+            this.Load += new System.EventHandler(this.SignIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,9 +195,13 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.CheckBox cbShowPassword;
-        private System.Windows.Forms.Button btnCreateAcount;
+        private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblSignIn;
         private System.Windows.Forms.Label lblRegister;
+        private Finel_ProjectDataSet finel_ProjectDataSet;
+        private System.Windows.Forms.BindingSource eVENT_OWNERSBindingSource;
+        private Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter eVENT_OWNERSTableAdapter;
+        private Finel_ProjectDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
