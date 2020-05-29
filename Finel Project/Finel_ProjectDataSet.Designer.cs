@@ -549,6 +549,8 @@ namespace Finel_Project {
                 this.columnUser_Name.AllowDBNull = false;
                 this.columnUser_Name.Unique = true;
                 this.columnUser_Name.MaxLength = 10;
+                this.columnPassword.AllowDBNull = false;
+                this.columnPassword.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1476,12 +1478,7 @@ namespace Finel_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Password {
                 get {
-                    try {
-                        return ((string)(this[this.tableEVENT_OWNERS.PasswordColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'EVENT_OWNERS\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableEVENT_OWNERS.PasswordColumn]));
                 }
                 set {
                     this[this.tableEVENT_OWNERS.PasswordColumn] = value;
@@ -1534,18 +1531,6 @@ namespace Finel_Project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEvent_TypeNull() {
                 this[this.tableEVENT_OWNERS.Event_TypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsPasswordNull() {
-                return this.IsNull(this.tableEVENT_OWNERS.PasswordColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetPasswordNull() {
-                this[this.tableEVENT_OWNERS.PasswordColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2194,9 +2179,10 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
             tableMapping.DataSetTable = "EVENT_OWNERS";
             tableMapping.ColumnMappings.Add("Owner First Name", "Owner First Name");
             tableMapping.ColumnMappings.Add("Owner Last Name", "Owner Last Name");
-            tableMapping.ColumnMappings.Add("Password", "Event Name");
-            tableMapping.ColumnMappings.Add("Event Name", "Event Type");
-            tableMapping.ColumnMappings.Add("Event Type", "User Name");
+            tableMapping.ColumnMappings.Add("Event Name", "Event Name");
+            tableMapping.ColumnMappings.Add("Event Type", "Event Type");
+            tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("User Name", "User Name");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;

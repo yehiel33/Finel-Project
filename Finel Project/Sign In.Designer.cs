@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblLastName = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.cbShowPassword = new System.Windows.Forms.CheckBox();
             this.btnCreateAcount = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -39,45 +39,44 @@
             this.lblRegister = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtFirstName
+            // txtUserName
             // 
-            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtFirstName.Location = new System.Drawing.Point(260, 138);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.PasswordChar = '*';
-            this.txtFirstName.Size = new System.Drawing.Size(246, 30);
-            this.txtFirstName.TabIndex = 47;
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.txtUserName.Location = new System.Drawing.Point(260, 138);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(246, 30);
+            this.txtUserName.TabIndex = 47;
             // 
-            // lblFirstName
+            // lblUserName
             // 
-            this.lblFirstName.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblFirstName.Location = new System.Drawing.Point(18, 138);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(244, 30);
-            this.lblFirstName.TabIndex = 55;
-            this.lblFirstName.Text = "First Name";
-            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserName.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblUserName.Location = new System.Drawing.Point(18, 138);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(244, 30);
+            this.lblUserName.TabIndex = 55;
+            this.lblUserName.Text = "User Name";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.textBox1.Location = new System.Drawing.Point(260, 174);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(246, 30);
-            this.textBox1.TabIndex = 48;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.txtPassword.Location = new System.Drawing.Point(260, 174);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(246, 30);
+            this.txtPassword.TabIndex = 48;
             // 
-            // lblLastName
+            // lblPassword
             // 
-            this.lblLastName.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblLastName.Location = new System.Drawing.Point(18, 174);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(244, 30);
-            this.lblLastName.TabIndex = 54;
-            this.lblLastName.Text = "Last Name";
-            this.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPassword.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblPassword.Location = new System.Drawing.Point(18, 174);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(244, 30);
+            this.lblPassword.TabIndex = 54;
+            this.lblPassword.Text = "Password";
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cbShowPassword
             // 
@@ -87,6 +86,7 @@
             this.cbShowPassword.TabIndex = 53;
             this.cbShowPassword.Text = "Show Password";
             this.cbShowPassword.UseVisualStyleBackColor = true;
+            this.cbShowPassword.CheckedChanged += new System.EventHandler(this.cbShowPassword_CheckedChanged);
             // 
             // btnCreateAcount
             // 
@@ -98,6 +98,7 @@
             this.btnCreateAcount.TabIndex = 49;
             this.btnCreateAcount.Text = "Create Acount";
             this.btnCreateAcount.UseVisualStyleBackColor = false;
+            this.btnCreateAcount.Click += new System.EventHandler(this.btnCreateAcount_Click);
             // 
             // btnBack
             // 
@@ -139,10 +140,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 336);
-            this.Controls.Add(this.txtFirstName);
-            this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblLastName);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.lblUserName);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.cbShowPassword);
             this.Controls.Add(this.btnCreateAcount);
             this.Controls.Add(this.btnBack);
@@ -157,10 +158,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.CheckBox cbShowPassword;
         private System.Windows.Forms.Button btnCreateAcount;
         private System.Windows.Forms.Button btnBack;

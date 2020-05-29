@@ -76,9 +76,10 @@
             <Mappings>
               <Mapping SourceColumn="Owner First Name" DataSetColumn="Owner First Name" />
               <Mapping SourceColumn="Owner Last Name" DataSetColumn="Owner Last Name" />
-              <Mapping SourceColumn="Password" DataSetColumn="Event Name" />
-              <Mapping SourceColumn="Event Name" DataSetColumn="Event Type" />
-              <Mapping SourceColumn="Event Type" DataSetColumn="User Name" />
+              <Mapping SourceColumn="Event Name" DataSetColumn="Event Name" />
+              <Mapping SourceColumn="Event Type" DataSetColumn="Event Type" />
+              <Mapping SourceColumn="Password" DataSetColumn="Password" />
+              <Mapping SourceColumn="User Name" DataSetColumn="User Name" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -261,7 +262,7 @@
   <xs:element name="Finel_ProjectDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Finel_ProjectDataSet" msprop:Generator_UserDSName="Finel_ProjectDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="GUEST_LIST" msprop:Generator_TableClassName="GUEST_LISTDataTable" msprop:Generator_TableVarName="tableGUEST_LIST" msprop:Generator_RowChangedName="GUEST_LISTRowChanged" msprop:Generator_TablePropName="GUEST_LIST" msprop:Generator_RowDeletingName="GUEST_LISTRowDeleting" msprop:Generator_RowChangingName="GUEST_LISTRowChanging" msprop:Generator_RowEvHandlerName="GUEST_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="GUEST_LISTRowDeleted" msprop:Generator_RowClassName="GUEST_LISTRow" msprop:Generator_UserTableName="GUEST_LIST" msprop:Generator_RowEvArgName="GUEST_LISTRowChangeEvent">
+        <xs:element name="GUEST_LIST" msprop:Generator_TableClassName="GUEST_LISTDataTable" msprop:Generator_TableVarName="tableGUEST_LIST" msprop:Generator_TablePropName="GUEST_LIST" msprop:Generator_RowDeletingName="GUEST_LISTRowDeleting" msprop:Generator_RowChangingName="GUEST_LISTRowChanging" msprop:Generator_RowEvHandlerName="GUEST_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="GUEST_LISTRowDeleted" msprop:Generator_UserTableName="GUEST_LIST" msprop:Generator_RowChangedName="GUEST_LISTRowChanged" msprop:Generator_RowEvArgName="GUEST_LISTRowChangeEvent" msprop:Generator_RowClassName="GUEST_LISTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PKID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPKID" msprop:Generator_ColumnPropNameInRow="PKID" msprop:Generator_ColumnPropNameInTable="PKIDColumn" msprop:Generator_UserColumnName="PKID" type="xs:int" />
@@ -312,7 +313,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SUPPLIERS" msprop:Generator_TableClassName="SUPPLIERSDataTable" msprop:Generator_TableVarName="tableSUPPLIERS" msprop:Generator_RowChangedName="SUPPLIERSRowChanged" msprop:Generator_TablePropName="SUPPLIERS" msprop:Generator_RowDeletingName="SUPPLIERSRowDeleting" msprop:Generator_RowChangingName="SUPPLIERSRowChanging" msprop:Generator_RowEvHandlerName="SUPPLIERSRowChangeEventHandler" msprop:Generator_RowDeletedName="SUPPLIERSRowDeleted" msprop:Generator_RowClassName="SUPPLIERSRow" msprop:Generator_UserTableName="SUPPLIERS" msprop:Generator_RowEvArgName="SUPPLIERSRowChangeEvent">
+        <xs:element name="SUPPLIERS" msprop:Generator_TableClassName="SUPPLIERSDataTable" msprop:Generator_TableVarName="tableSUPPLIERS" msprop:Generator_TablePropName="SUPPLIERS" msprop:Generator_RowDeletingName="SUPPLIERSRowDeleting" msprop:Generator_RowChangingName="SUPPLIERSRowChanging" msprop:Generator_RowEvHandlerName="SUPPLIERSRowChangeEventHandler" msprop:Generator_RowDeletedName="SUPPLIERSRowDeleted" msprop:Generator_UserTableName="SUPPLIERS" msprop:Generator_RowChangedName="SUPPLIERSRowChanged" msprop:Generator_RowEvArgName="SUPPLIERSRowChangeEvent" msprop:Generator_RowClassName="SUPPLIERSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Supplier_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnSupplier_Name" msprop:Generator_ColumnPropNameInRow="Supplier_Name" msprop:Generator_ColumnPropNameInTable="Supplier_NameColumn" msprop:Generator_UserColumnName="Supplier Name">
@@ -330,7 +331,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EVENT_OWNERS" msprop:Generator_TableClassName="EVENT_OWNERSDataTable" msprop:Generator_TableVarName="tableEVENT_OWNERS" msprop:Generator_RowChangedName="EVENT_OWNERSRowChanged" msprop:Generator_TablePropName="EVENT_OWNERS" msprop:Generator_RowDeletingName="EVENT_OWNERSRowDeleting" msprop:Generator_RowChangingName="EVENT_OWNERSRowChanging" msprop:Generator_RowEvHandlerName="EVENT_OWNERSRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENT_OWNERSRowDeleted" msprop:Generator_RowClassName="EVENT_OWNERSRow" msprop:Generator_UserTableName="EVENT_OWNERS" msprop:Generator_RowEvArgName="EVENT_OWNERSRowChangeEvent">
+        <xs:element name="EVENT_OWNERS" msprop:Generator_TableClassName="EVENT_OWNERSDataTable" msprop:Generator_TableVarName="tableEVENT_OWNERS" msprop:Generator_TablePropName="EVENT_OWNERS" msprop:Generator_RowDeletingName="EVENT_OWNERSRowDeleting" msprop:Generator_RowChangingName="EVENT_OWNERSRowChanging" msprop:Generator_RowEvHandlerName="EVENT_OWNERSRowChangeEventHandler" msprop:Generator_RowDeletedName="EVENT_OWNERSRowDeleted" msprop:Generator_UserTableName="EVENT_OWNERS" msprop:Generator_RowChangedName="EVENT_OWNERSRowChanged" msprop:Generator_RowEvArgName="EVENT_OWNERSRowChangeEvent" msprop:Generator_RowClassName="EVENT_OWNERSRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Owner_x0020_First_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnOwner_First_Name" msprop:Generator_ColumnPropNameInRow="Owner_First_Name" msprop:Generator_ColumnPropNameInTable="Owner_First_NameColumn" msprop:Generator_UserColumnName="Owner First Name" minOccurs="0">
@@ -368,7 +369,13 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" type="xs:string" minOccurs="0" />
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

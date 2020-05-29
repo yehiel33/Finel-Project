@@ -139,9 +139,9 @@
             // 
             this.btnCreateAcount.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnCreateAcount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnCreateAcount.Location = new System.Drawing.Point(360, 482);
+            this.btnCreateAcount.Location = new System.Drawing.Point(339, 482);
             this.btnCreateAcount.Name = "btnCreateAcount";
-            this.btnCreateAcount.Size = new System.Drawing.Size(146, 57);
+            this.btnCreateAcount.Size = new System.Drawing.Size(167, 57);
             this.btnCreateAcount.TabIndex = 7;
             this.btnCreateAcount.Text = "Create Acount";
             this.btnCreateAcount.UseVisualStyleBackColor = false;
@@ -264,7 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 710);
+            this.ClientSize = new System.Drawing.Size(526, 552);
             this.Controls.Add(this.cbEventType);
             this.Controls.Add(this.lblEventType);
             this.Controls.Add(this.txtEventName);
