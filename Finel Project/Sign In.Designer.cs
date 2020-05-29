@@ -48,6 +48,7 @@
             // 
             // txtUserName
             // 
+            this.txtUserName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "User Name", true));
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtUserName.Location = new System.Drawing.Point(260, 138);
             this.txtUserName.Name = "txtUserName";
@@ -67,6 +68,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eVENT_OWNERSBindingSource, "Password", true));
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.txtPassword.Location = new System.Drawing.Point(260, 174);
             this.txtPassword.Name = "txtPassword";
@@ -180,7 +182,6 @@
             this.Controls.Add(this.lblRegister);
             this.Name = "SignIn";
             this.Text = "Sign In";
-            this.Load += new System.EventHandler(this.SignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).EndInit();
             this.ResumeLayout(false);
