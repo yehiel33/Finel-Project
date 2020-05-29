@@ -853,13 +853,6 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GUEST_LISTRow FindByPKID(int PKID) {
-                return ((GUEST_LISTRow)(this.Rows.Find(new object[] {
-                            PKID})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 GUEST_LISTDataTable cln = ((GUEST_LISTDataTable)(base.Clone()));
                 cln.InitVars();
@@ -907,13 +900,10 @@ namespace Finel_Project {
                 base.Columns.Add(this.columnAlcohol_Drinker);
                 this.columnBus = new global::System.Data.DataColumn("Bus", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBus);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnPKID}, true));
                 this.columnPKID.AutoIncrement = true;
                 this.columnPKID.AutoIncrementSeed = -1;
                 this.columnPKID.AutoIncrementStep = -1;
                 this.columnPKID.AllowDBNull = false;
-                this.columnPKID.Unique = true;
                 this.columnEvent_Owner.MaxLength = 15;
                 this.columnGuest_First_Name.MaxLength = 10;
                 this.columnGuest_Last_Name.MaxLength = 10;
@@ -1199,13 +1189,6 @@ namespace Finel_Project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SUPPLIERSRow FindBySupplier_Name(string Supplier_Name) {
-                return ((SUPPLIERSRow)(this.Rows.Find(new object[] {
-                            Supplier_Name})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 SUPPLIERSDataTable cln = ((SUPPLIERSDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1244,10 +1227,7 @@ namespace Finel_Project {
                 base.Columns.Add(this.columnPrice_For_Alcohol);
                 this.columnPrice_For_Bus = new global::System.Data.DataColumn("Price For Bus", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice_For_Bus);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnSupplier_Name}, true));
                 this.columnSupplier_Name.AllowDBNull = false;
-                this.columnSupplier_Name.Unique = true;
                 this.columnSupplier_Name.MaxLength = 15;
             }
             
@@ -3511,14 +3491,6 @@ namespace Finel_Project.Finel_ProjectDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Price_For_Regular, global::System.Nullable<int> Price_For_Vegeterian, global::System.Nullable<int> Price_For_Vegan, global::System.Nullable<int> Price_For_Alcohol, global::System.Nullable<int> Price_For_Bus, string Original_Supplier_Name, global::System.Nullable<int> Original_Price_For_Regular, global::System.Nullable<int> Original_Price_For_Vegeterian, global::System.Nullable<int> Original_Price_For_Vegan, global::System.Nullable<int> Original_Price_For_Alcohol, global::System.Nullable<int> Original_Price_For_Bus) {
-            return this.Update(Original_Supplier_Name, Price_For_Regular, Price_For_Vegeterian, Price_For_Vegan, Price_For_Alcohol, Price_For_Bus, Original_Supplier_Name, Original_Price_For_Regular, Original_Price_For_Vegeterian, Original_Price_For_Vegan, Original_Price_For_Alcohol, Original_Price_For_Bus);
         }
     }
     
