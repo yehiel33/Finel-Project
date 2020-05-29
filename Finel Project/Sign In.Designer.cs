@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtUserName = new System.Windows.Forms.TextBox();
+            this.eVENT_OWNERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
             this.lblUserName = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -38,12 +40,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblSignIn = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
-            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
-            this.eVENT_OWNERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eVENT_OWNERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
             this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -54,6 +54,16 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(246, 30);
             this.txtUserName.TabIndex = 47;
+            // 
+            // eVENT_OWNERSBindingSource
+            // 
+            this.eVENT_OWNERSBindingSource.DataMember = "EVENT_OWNERS";
+            this.eVENT_OWNERSBindingSource.DataSource = this.finel_ProjectDataSet;
+            // 
+            // finel_ProjectDataSet
+            // 
+            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
+            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblUserName
             // 
@@ -144,16 +154,6 @@
             this.lblRegister.Text = "Please Register To The System:";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // finel_ProjectDataSet
-            // 
-            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
-            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eVENT_OWNERSBindingSource
-            // 
-            this.eVENT_OWNERSBindingSource.DataMember = "EVENT_OWNERS";
-            this.eVENT_OWNERSBindingSource.DataSource = this.finel_ProjectDataSet;
-            // 
             // eVENT_OWNERSTableAdapter
             // 
             this.eVENT_OWNERSTableAdapter.ClearBeforeFill = true;
@@ -182,8 +182,8 @@
             this.Controls.Add(this.lblRegister);
             this.Name = "SignIn";
             this.Text = "Sign In";
-            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eVENT_OWNERSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

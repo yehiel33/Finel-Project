@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Net.Mail;
+using System.Data.SqlClient;
 
 namespace Finel_Project
 {
@@ -27,14 +28,14 @@ namespace Finel_Project
             EventSeatingManager eventseatingmanager = new EventSeatingManager();
             eventseatingmanager.ShowDialog();
         }
-      /* private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+       private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.eVENT_OWNERSBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
 
         }
-        */
+        
        
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -51,31 +52,57 @@ namespace Finel_Project
             {
                 MessageBox.Show("please insert user name and password");
             }
-            else
+            try
             {
-                try
+                Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter user = new Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
+                Finel_ProjectDataSet.EVENT_OWNERSDataTable dt = user.GetDataByUserNameAndPassword(txtUserName.Text, txtPassword.Text);
+                if(dt.Rows.Count==1)
                 {
-                   /* string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
-                    OleDbConnection conn = new OleDbConnection(strDb);
-                    OleDbCommand command = new OleDbCommand();
-                    conn.Open();
-                    command.Connection = conn;
-                    command.CommandText = "SELECT * FROM EVENT_OWNERS WHERE user name='" + txtUserName.Text + "'and password='" + txtPassword.Text + "'";
-                    OleDbDataReader reader= command.ExecuteReader();
-                    int count = 0;
-                    */
-                     string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
-                     string sqlquery = @"SETECT COUNT (*) FROM EVENT_OWNERS WHERE User Name='" + txtUserName.Text + "' and Password='" + txtPassword.Text + "';";
+                    OptionsEnabledFlag = true;
+                    this.Close();
+                    EventSeatingManager eventseatingmanager = new EventSeatingManager();
+                    eventseatingmanager.ShowDialog();
+                }
+               
+                if(dt.Rows.Count>1)
+                {
+                    MessageBox.Show("Duplicate User Name!");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect user name or password");
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            {
+                /* try
+                {
+                    string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
                      OleDbConnection conn = new OleDbConnection(strDb);
-                     OleDbCommand cmd = new OleDbCommand(sqlquery, conn); //command sql
+                     OleDbCommand command = new OleDbCommand();
                      conn.Open();
-                     //OleDbDataReader reader = cmd.ExecuteReader();
-                    int count = (Int32) cmd.ExecuteScalar();
-                    
-                   /* while (reader.Read())
+                     command.Connection = conn;
+                     command.CommandText = "SELECT * FROM EVENT_OWNERS WHERE user name='" + txtUserName.Text + "'and password='" + txtPassword.Text + "'";
+                     OleDbDataReader reader= command.ExecuteReader();
+                     int count = 0;
+
+                      string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
+                      OleDbConnection conn = new OleDbConnection(strDb);
+                      conn.Open();
+                      OleDbCommand cmd = new OleDbCommand("SETECT COUNT (*) FROM EVENT_OWNERS WHERE [User Name]='" + txtUserName.Text + "' and [Password]='" + txtPassword.Text + "';", conn); //command sql
+                      OleDbDataReader reader = cmd.ExecuteReader();
+                      int count = 0;
+
+
+
+
+                while (reader.Read())
                     {
                         count++;
-                    }*/
+                    }
                     if (count ==1)
                     {
                         OptionsEnabledFlag = true;
@@ -98,11 +125,11 @@ namespace Finel_Project
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                }*/
             }
-            }
+        }
 
-     
+       
     }
     }
 
