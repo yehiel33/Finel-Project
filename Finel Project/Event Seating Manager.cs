@@ -16,6 +16,8 @@ namespace Finel_Project
          Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Public\Finel Project\Finel Project.accdb" 
          */
 
+        public static string globalusername = "";
+
         public EventSeatingManager()
         {
             InitializeComponent();
@@ -27,6 +29,7 @@ namespace Finel_Project
             this.Hide(); 
             SignIn signin= new SignIn();
             signin.ShowDialog();
+            
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
@@ -35,6 +38,7 @@ namespace Finel_Project
             this.Hide();
             CreateAccount createaccount= new CreateAccount();
             createaccount.ShowDialog();
+            this.Hide();
         }
 
         private void btnGueasList_Click(object sender, EventArgs e)
@@ -43,6 +47,7 @@ namespace Finel_Project
             this.Hide();
             GuestList guestlist = new GuestList();
             guestlist.ShowDialog();
+            this.Hide();
         }
 
         private void btnCostEvaluetion_Click(object sender, EventArgs e)
@@ -51,6 +56,7 @@ namespace Finel_Project
             this.Hide();
             CostEvaluation costevaluation = new CostEvaluation();
             costevaluation.ShowDialog();
+            this.Hide();
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
@@ -59,6 +65,7 @@ namespace Finel_Project
             this.Hide();
             Statistics statistics = new Statistics();
             statistics.ShowDialog();
+            this.Hide();
         }
 
         private void btnSeating_Click(object sender, EventArgs e)
@@ -67,6 +74,23 @@ namespace Finel_Project
             this.Hide();
             Seating seating = new Seating();
             seating.ShowDialog();
+            this.Hide();
+        }
+
+        private void EventSeatingManager_Load(object sender, EventArgs e)
+        {
+            bool flag = SignIn.EnableBtnFlag;
+            if (flag == true)
+            {
+             btnGueasList.Enabled = true;
+             btnCostEvaluetion.Enabled = true;
+             btnSeating.Enabled = true;
+             btnStatistics.Enabled = true;
+             lblWelcome.Text = "Welcome " + globalusername + "!";
+            }
+            
+
+            
         }
     }
 }
