@@ -10,12 +10,13 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Net.Mail;
 using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Finel_Project
 {
     public partial class SignIn : Form
     {
-        public static bool OptionsEnabledFlag = false;
+        public static bool EnableBtnFlag = false;
         public SignIn()
         {
             InitializeComponent();
@@ -33,10 +34,8 @@ namespace Finel_Project
             this.Validate();
             this.eVENT_OWNERSBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
-
         }
-        
-       
+
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             //הצגה וביטול הצגת סיסמא
@@ -52,84 +51,46 @@ namespace Finel_Project
             {
                 MessageBox.Show("please insert user name and password");
             }
+            bool tryFlag = false; // משתנה שבודק אם הניסיון לכתוב לבסיס הנתונים הצליח
             try
             {
                 Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter user = new Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
                 Finel_ProjectDataSet.EVENT_OWNERSDataTable dt = user.GetDataByUserNameAndPassword(txtUserName.Text, txtPassword.Text);
                 if(dt.Rows.Count==1)
                 {
-                    OptionsEnabledFlag = true;
-                    this.Close();
-                    EventSeatingManager eventseatingmanager = new EventSeatingManager();
-                    eventseatingmanager.ShowDialog();
+                    EventSeatingManager.globalusername = txtUserName.Text;
+                    EnableBtnFlag = true;
+                    tryFlag = true;
                 }
                
-                if(dt.Rows.Count>1)
+                else if(dt.Rows.Count>1)
                 {
                     MessageBox.Show("Duplicate User Name!");
+                    tryFlag = false;
                 }
                 else
                 {
                     MessageBox.Show("Incorrect user name or password");
+                    tryFlag = false;
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            if(tryFlag ==true)
             {
-                /* try
-                {
-                    string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
-                     OleDbConnection conn = new OleDbConnection(strDb);
-                     OleDbCommand command = new OleDbCommand();
-                     conn.Open();
-                     command.Connection = conn;
-                     command.CommandText = "SELECT * FROM EVENT_OWNERS WHERE user name='" + txtUserName.Text + "'and password='" + txtPassword.Text + "'";
-                     OleDbDataReader reader= command.ExecuteReader();
-                     int count = 0;
-
-                      string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
-                      OleDbConnection conn = new OleDbConnection(strDb);
-                      conn.Open();
-                      OleDbCommand cmd = new OleDbCommand("SETECT COUNT (*) FROM EVENT_OWNERS WHERE [User Name]='" + txtUserName.Text + "' and [Password]='" + txtPassword.Text + "';", conn); //command sql
-                      OleDbDataReader reader = cmd.ExecuteReader();
-                      int count = 0;
-
-
-
-
-                while (reader.Read())
-                    {
-                        count++;
-                    }
-                    if (count ==1)
-                    {
-                        OptionsEnabledFlag = true;
-                        conn.Close();
-                        this.Close();
-                        EventSeatingManager eventseatingmanager = new EventSeatingManager();
-                        eventseatingmanager.ShowDialog();
-                    }
-                    if (count > 1)
-                    {
-                        MessageBox.Show("Duplicate User Name!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Incorrect user name or password");
-                    }
-                    conn.Close();
-
-                }
-                catch (Exception err)
-                {
-                    MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
+                this.Close();
+                EventSeatingManager eventseatingmanager = new EventSeatingManager();
+                eventseatingmanager.ShowDialog();
+                this.Close();
             }
+            
+            
         }
+        
 
-       
+
     }
     }
 

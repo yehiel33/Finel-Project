@@ -101,7 +101,6 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(246, 30);
             this.txtFirstName.TabIndex = 1;
-            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // lblFirstName
             // 
