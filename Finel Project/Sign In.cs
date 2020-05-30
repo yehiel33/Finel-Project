@@ -77,56 +77,7 @@ namespace Finel_Project
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            {
-                /* try
-                {
-                    string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
-                     OleDbConnection conn = new OleDbConnection(strDb);
-                     OleDbCommand command = new OleDbCommand();
-                     conn.Open();
-                     command.Connection = conn;
-                     command.CommandText = "SELECT * FROM EVENT_OWNERS WHERE user name='" + txtUserName.Text + "'and password='" + txtPassword.Text + "'";
-                     OleDbDataReader reader= command.ExecuteReader();
-                     int count = 0;
-
-                      string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
-                      OleDbConnection conn = new OleDbConnection(strDb);
-                      conn.Open();
-                      OleDbCommand cmd = new OleDbCommand("SETECT COUNT (*) FROM EVENT_OWNERS WHERE [User Name]='" + txtUserName.Text + "' and [Password]='" + txtPassword.Text + "';", conn); //command sql
-                      OleDbDataReader reader = cmd.ExecuteReader();
-                      int count = 0;
-
-
-
-
-                while (reader.Read())
-                    {
-                        count++;
-                    }
-                    if (count ==1)
-                    {
-                        OptionsEnabledFlag = true;
-                        conn.Close();
-                        this.Close();
-                        EventSeatingManager eventseatingmanager = new EventSeatingManager();
-                        eventseatingmanager.ShowDialog();
-                    }
-                    if (count > 1)
-                    {
-                        MessageBox.Show("Duplicate User Name!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Incorrect user name or password");
-                    }
-                    conn.Close();
-
-                }
-                catch (Exception err)
-                {
-                    MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }*/
-            }
+            
         }
 
        
