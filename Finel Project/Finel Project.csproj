@@ -99,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suppliers%27 offers comparison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers%27 offers comparison.designer.cs">
+      <DependentUpon>Suppliers%27 offers comparison.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Event Seating Manager.resx">
       <DependentUpon>Event Seating Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Suppliers%27 offers comparison.resx">
+      <DependentUpon>Suppliers%27 offers comparison.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Finel_ProjectDataSet.xsc">
       <DependentUpon>Finel_ProjectDataSet.xsd</DependentUpon>
     </None>
