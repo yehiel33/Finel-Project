@@ -76,6 +76,7 @@
             // btnSeating
             // 
             this.btnSeating.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnSeating.Enabled = false;
             this.btnSeating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnSeating.Location = new System.Drawing.Point(219, 379);
             this.btnSeating.Name = "btnSeating";
@@ -88,6 +89,7 @@
             // btnStatistics
             // 
             this.btnStatistics.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnStatistics.Enabled = false;
             this.btnStatistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnStatistics.Location = new System.Drawing.Point(46, 379);
             this.btnStatistics.Name = "btnStatistics";
@@ -100,6 +102,7 @@
             // btnCostEvaluetion
             // 
             this.btnCostEvaluetion.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnCostEvaluetion.Enabled = false;
             this.btnCostEvaluetion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnCostEvaluetion.Location = new System.Drawing.Point(219, 250);
             this.btnCostEvaluetion.Name = "btnCostEvaluetion";
@@ -112,6 +115,7 @@
             // btnGueasList
             // 
             this.btnGueasList.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnGueasList.Enabled = false;
             this.btnGueasList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnGueasList.Location = new System.Drawing.Point(46, 250);
             this.btnGueasList.Name = "btnGueasList";
@@ -149,6 +153,7 @@
             this.Controls.Add(this.lblEventSeatingManager);
             this.Name = "EventSeatingManager";
             this.Text = "Event Seating Manager";
+            this.Load += new System.EventHandler(this.EventSeatingManager_Load);
             this.ResumeLayout(false);
 
         }

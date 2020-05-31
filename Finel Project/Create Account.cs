@@ -54,6 +54,7 @@ namespace Finel_Project
             }
             else
             {
+                bool tryFlag = false; // משתנה שבודק אם הניסיון לכתוב לבסיס הנתונים הצליח
                 try
                 {
                     //הוספת שורה לדטה סט שתכיל את התוכן של תיבות הטקסט
@@ -64,21 +65,26 @@ namespace Finel_Project
                     eVENT_OWNERSBindingSource.EndEdit();
                     // מעדכן את בסיס הנתונים מול הדטה סט
                     tableAdapterManager.UpdateAll(finel_ProjectDataSet);
-                    //ניקויי שדות
-                    ClearText();
-
+                    
                     MessageBox.Show("Registration completed successfully!");
-
-                    this.Close();
-                    SignIn signin = new SignIn();
-                    signin.ShowDialog();
-
+                    tryFlag = true;
                 }
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message, "error");
-                }
+                    tryFlag = false;
 
+                }
+                if(tryFlag==true)
+                {
+                    //ניקויי שדות
+                    ClearText();
+                    this.Close();
+                    SignIn signin = new SignIn();
+                    signin.ShowDialog();
+                    this.Close();
+
+                }
             }
 
         }
@@ -92,9 +98,6 @@ namespace Finel_Project
                 txtPassword.PasswordChar = '*'; 
         }
 
-        private void txtFirstName_TextChanged(object sender, EventArgs e)
-        {
-            txtUserName.Text = "";
-        }
+        
     }     
 }
