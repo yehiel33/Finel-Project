@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Finel_Project
 {
-    public partial class offers : Form
+    public partial class OffersComparison : Form
     {
-        public offers()
+        public OffersComparison()
         {
             InitializeComponent();
         }

@@ -54,8 +54,8 @@ namespace Finel_Project
         {
             //הסתרת החלון הנוכחי ומעבר לחלון אומדן עלויות
             this.Hide();
-            CostEvaluation costevaluation = new CostEvaluation();
-            costevaluation.ShowDialog();
+            OffersComparison offerscomparison = new OffersComparison();
+            offerscomparison.ShowDialog();
             this.Hide();
         }
 

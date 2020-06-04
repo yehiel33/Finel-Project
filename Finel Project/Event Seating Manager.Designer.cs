@@ -108,7 +108,7 @@
             this.btnCostEvaluetion.Name = "btnCostEvaluetion";
             this.btnCostEvaluetion.Size = new System.Drawing.Size(158, 123);
             this.btnCostEvaluetion.TabIndex = 34;
-            this.btnCostEvaluetion.Text = "Cost Evaluation";
+            this.btnCostEvaluetion.Text = "Offers";
             this.btnCostEvaluetion.UseVisualStyleBackColor = false;
             this.btnCostEvaluetion.Click += new System.EventHandler(this.btnCostEvaluetion_Click);
             // 
