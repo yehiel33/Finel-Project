@@ -92,5 +92,10 @@ namespace Finel_Project
 
             
         }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
