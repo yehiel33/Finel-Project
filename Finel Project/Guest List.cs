@@ -41,7 +41,9 @@ namespace Finel_Project
             //dv.Table = finel_ProjectDataSet.Tables[1];
             //dv.RowFilter = "Event Owner =" + EventSeatingManager.globalusername;
             //gUEST_LISTDataGridView.DataSource = dv;
-
+            DataView dv;
+            dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner]='" + EventSeatingManager.globalusername + "'", "[Event Owner] Desc", DataViewRowState.CurrentRows);
+            gUEST_LISTDataGridView.DataSource = dv;
         }
 
         private void btnAddGuest_Click(object sender, EventArgs e)
@@ -62,7 +64,7 @@ namespace Finel_Project
             //dv.RowFilter = "Event Owner = 'OOkun'"; EventSeatingManager.globalusername;
             //gUEST_LISTDataGridView.DataSource = dv;
             DataView dv;
-            dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner] = '" + EventSeatingManager.globalusername + "', "[Event Owner] Desc", DataViewRowState.CurrentRows);
+            dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner]='" + EventSeatingManager.globalusername + "'", "[Event Owner] Desc", DataViewRowState.CurrentRows);
             gUEST_LISTDataGridView.DataSource = dv;
         }
     }
