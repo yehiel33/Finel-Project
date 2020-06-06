@@ -73,7 +73,7 @@
             this.tsmOptionToComprise});
             this.msSelect.Location = new System.Drawing.Point(0, 0);
             this.msSelect.Name = "msSelect";
-            this.msSelect.Size = new System.Drawing.Size(470, 30);
+            this.msSelect.Size = new System.Drawing.Size(470, 28);
             this.msSelect.TabIndex = 54;
             this.msSelect.Text = "select option to compare";
             // 
@@ -227,7 +227,7 @@
             this.lblFindMeTheTotalCheapestQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblFindMeTheTotalCheapestQuote.Location = new System.Drawing.Point(12, 281);
             this.lblFindMeTheTotalCheapestQuote.Name = "lblFindMeTheTotalCheapestQuote";
-            this.lblFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 56);
+            this.lblFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 97);
             this.lblFindMeTheTotalCheapestQuote.TabIndex = 63;
             this.lblFindMeTheTotalCheapestQuote.Visible = false;
             // 
