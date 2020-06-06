@@ -67,6 +67,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Finel_ProjectDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Offers Comparison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offers Comparison.Designer.cs">
+      <DependentUpon>Offers Comparison.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sign In.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Create Account.resx">
       <DependentUpon>Create Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offers Comparison.resx">
+      <DependentUpon>Offers Comparison.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sign In.resx">
       <DependentUpon>Sign In.cs</DependentUpon>

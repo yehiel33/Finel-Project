@@ -30,6 +30,7 @@ namespace Finel_Project
             this.Hide();
             EventSeatingManager eventseatingmanager = new EventSeatingManager();
             eventseatingmanager.ShowDialog();
+            this.Close();
         }
 
         private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e) // פונקציה ראשונה שנוצרת בעת קישור הדטה בייס לקוד

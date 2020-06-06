@@ -25,6 +25,7 @@ namespace Finel_Project
             this.Hide();
             EventSeatingManager eventseatingmanager = new EventSeatingManager();
             eventseatingmanager.ShowDialog();
+            this.Close();
         }
 
         
