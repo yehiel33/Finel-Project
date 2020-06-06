@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.sUPPLIERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
-            this.sUPPLIERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.SUPPLIERSTableAdapter();
             this.btnBack = new System.Windows.Forms.Button();
             this.msSelect = new System.Windows.Forms.MenuStrip();
             this.tsmOptionToComprise = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,24 +43,14 @@
             this.lblSupplier2 = new System.Windows.Forms.Label();
             this.lblSupplier3 = new System.Windows.Forms.Label();
             this.lblSupplier1 = new System.Windows.Forms.Label();
+            this.sUPPLIERSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
+            this.sUPPLIERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.SUPPLIERSTableAdapter();
+            this.lblComparison = new System.Windows.Forms.Label();
+            this.msSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sUPPLIERSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
-            this.msSelect.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // sUPPLIERSBindingSource
-            // 
-            this.sUPPLIERSBindingSource.DataMember = "SUPPLIERS";
-            this.sUPPLIERSBindingSource.DataSource = this.finel_ProjectDataSet;
-            // 
-            // finel_ProjectDataSet
-            // 
-            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
-            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sUPPLIERSTableAdapter
-            // 
-            this.sUPPLIERSTableAdapter.ClearBeforeFill = true;
             // 
             // btnBack
             // 
@@ -84,7 +71,7 @@
             this.tsmOptionToComprise});
             this.msSelect.Location = new System.Drawing.Point(0, 0);
             this.msSelect.Name = "msSelect";
-            this.msSelect.Size = new System.Drawing.Size(470, 30);
+            this.msSelect.Size = new System.Drawing.Size(470, 28);
             this.msSelect.TabIndex = 54;
             this.msSelect.Text = "select option to compare";
             // 
@@ -97,7 +84,7 @@
             this.priceForAlcoholToolStripMenuItem,
             this.priceForBusToolStripMenuItem});
             this.tsmOptionToComprise.Name = "tsmOptionToComprise";
-            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 26);
+            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 24);
             this.tsmOptionToComprise.Text = "option to comprise";
             // 
             // priceForRegularToolStripMenuItem
@@ -112,29 +99,33 @@
             this.priceForVegeterianToolStripMenuItem.Name = "priceForVegeterianToolStripMenuItem";
             this.priceForVegeterianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.priceForVegeterianToolStripMenuItem.Text = "Price For Vegeterian";
+            this.priceForVegeterianToolStripMenuItem.Click += new System.EventHandler(this.priceForVegeterianToolStripMenuItem_Click);
             // 
             // priceForVeganToolStripMenuItem
             // 
             this.priceForVeganToolStripMenuItem.Name = "priceForVeganToolStripMenuItem";
             this.priceForVeganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.priceForVeganToolStripMenuItem.Text = "Price For Vegan";
+            this.priceForVeganToolStripMenuItem.Click += new System.EventHandler(this.priceForVeganToolStripMenuItem_Click);
             // 
             // priceForAlcoholToolStripMenuItem
             // 
             this.priceForAlcoholToolStripMenuItem.Name = "priceForAlcoholToolStripMenuItem";
             this.priceForAlcoholToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.priceForAlcoholToolStripMenuItem.Text = "Price For Alcohol";
+            this.priceForAlcoholToolStripMenuItem.Click += new System.EventHandler(this.priceForAlcoholToolStripMenuItem_Click);
             // 
             // priceForBusToolStripMenuItem
             // 
             this.priceForBusToolStripMenuItem.Name = "priceForBusToolStripMenuItem";
             this.priceForBusToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.priceForBusToolStripMenuItem.Text = "Price For Bus";
+            this.priceForBusToolStripMenuItem.Click += new System.EventHandler(this.priceForBusToolStripMenuItem_Click);
             // 
             // lblprice1
             // 
             this.lblprice1.BackColor = System.Drawing.SystemColors.Window;
-            this.lblprice1.Location = new System.Drawing.Point(12, 104);
+            this.lblprice1.Location = new System.Drawing.Point(12, 128);
             this.lblprice1.Name = "lblprice1";
             this.lblprice1.Size = new System.Drawing.Size(132, 32);
             this.lblprice1.TabIndex = 58;
@@ -143,7 +134,7 @@
             // lblprice2
             // 
             this.lblprice2.BackColor = System.Drawing.SystemColors.Window;
-            this.lblprice2.Location = new System.Drawing.Point(176, 104);
+            this.lblprice2.Location = new System.Drawing.Point(176, 128);
             this.lblprice2.Name = "lblprice2";
             this.lblprice2.Size = new System.Drawing.Size(129, 32);
             this.lblprice2.TabIndex = 59;
@@ -152,7 +143,7 @@
             // lblprice3
             // 
             this.lblprice3.BackColor = System.Drawing.SystemColors.Window;
-            this.lblprice3.Location = new System.Drawing.Point(328, 104);
+            this.lblprice3.Location = new System.Drawing.Point(328, 128);
             this.lblprice3.Name = "lblprice3";
             this.lblprice3.Size = new System.Drawing.Size(130, 32);
             this.lblprice3.TabIndex = 60;
@@ -160,9 +151,9 @@
             // 
             // lblSupplier2
             // 
-            this.lblSupplier2.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSupplier2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.lblSupplier2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblSupplier2.Location = new System.Drawing.Point(329, 59);
+            this.lblSupplier2.Location = new System.Drawing.Point(329, 83);
             this.lblSupplier2.Name = "lblSupplier2";
             this.lblSupplier2.Size = new System.Drawing.Size(129, 32);
             this.lblSupplier2.TabIndex = 56;
@@ -171,9 +162,9 @@
             // 
             // lblSupplier3
             // 
-            this.lblSupplier3.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSupplier3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.lblSupplier3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblSupplier3.Location = new System.Drawing.Point(176, 59);
+            this.lblSupplier3.Location = new System.Drawing.Point(176, 83);
             this.lblSupplier3.Name = "lblSupplier3";
             this.lblSupplier3.Size = new System.Drawing.Size(129, 32);
             this.lblSupplier3.TabIndex = 57;
@@ -182,20 +173,46 @@
             // 
             // lblSupplier1
             // 
-            this.lblSupplier1.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSupplier1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.lblSupplier1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblSupplier1.Location = new System.Drawing.Point(12, 59);
+            this.lblSupplier1.Location = new System.Drawing.Point(12, 83);
             this.lblSupplier1.Name = "lblSupplier1";
             this.lblSupplier1.Size = new System.Drawing.Size(132, 32);
             this.lblSupplier1.TabIndex = 55;
             this.lblSupplier1.Text = "אא הפקות";
             this.lblSupplier1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // sUPPLIERSBindingSource
+            // 
+            this.sUPPLIERSBindingSource.DataMember = "SUPPLIERS";
+            this.sUPPLIERSBindingSource.DataSource = this.finel_ProjectDataSet;
+            // 
+            // finel_ProjectDataSet
+            // 
+            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
+            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sUPPLIERSTableAdapter
+            // 
+            this.sUPPLIERSTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblComparison
+            // 
+            this.lblComparison.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblComparison.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblComparison.Location = new System.Drawing.Point(12, 28);
+            this.lblComparison.Name = "lblComparison";
+            this.lblComparison.Size = new System.Drawing.Size(446, 40);
+            this.lblComparison.TabIndex = 61;
+            this.lblComparison.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblComparison.Visible = false;
+            // 
             // OffersComparison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 450);
+            this.Controls.Add(this.lblComparison);
             this.Controls.Add(this.lblprice3);
             this.Controls.Add(this.lblprice2);
             this.Controls.Add(this.lblprice1);
@@ -208,10 +225,10 @@
             this.Name = "OffersComparison";
             this.Text = "Offers Comparison";
             this.Load += new System.EventHandler(this.Offers_Comparison_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.sUPPLIERSBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             this.msSelect.ResumeLayout(false);
             this.msSelect.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sUPPLIERSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +252,6 @@
         private System.Windows.Forms.Label lblSupplier2;
         private System.Windows.Forms.Label lblSupplier3;
         private System.Windows.Forms.Label lblSupplier1;
+        private System.Windows.Forms.Label lblComparison;
     }
 }

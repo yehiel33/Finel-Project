@@ -83,10 +83,10 @@ namespace Finel_Project
             if (flag == true)
             {
              btnGueasList.Enabled = true;
-             btnCostEvaluetion.Enabled = true;
+             btnComparePrices.Enabled = true;
              btnSeating.Enabled = true;
              btnStatistics.Enabled = true;
-             lblWelcome.Text = "Welcome " + globalusername + "!";
+             lblWelcome.Text = "Welcome " + globalusername + " !";
             }
             
 
