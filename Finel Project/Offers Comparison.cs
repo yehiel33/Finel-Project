@@ -218,6 +218,37 @@ namespace Finel_Project
                 conn.Close();
             }
         }
+
+        private void btnFindMeTheTotalCheapestQuote_Click(object sender, EventArgs e)
+        {
+            // הגדרת מחרוזת שמכילה את פקודת החיבור
+            string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
+            // יצירת חיבור חדש לבסיס הנתונים
+            OleDbConnection conn = new OleDbConnection(strDb);
+            OleDbCommand cmd_coholdrinker = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Alcohol Drinker]=true ;", conn);
+            OleDbCommand cmd_regular = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Dish Type]='רגיל' ;", conn);
+            OleDbCommand cmd_vegeterian = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Dish Type]='צמחוני' ;", conn);
+            OleDbCommand cmd_vegan = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Dish Type]='טבעוני' ;", conn);
+            OleDbCommand cmd_bus = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [bus]=true ;", conn);
+
+            try
+            {
+                conn.Open();
+                int numberofalcoholdrinker = (Int32)cmd_coholdrinker.ExecuteScalar();  // הגדרת אובייקט קריאה
+                int numberofregular = (Int32)cmd_regular.ExecuteScalar();
+                int numberofvegeterian = (Int32)cmd_vegeterian.ExecuteScalar();
+                int numberofvegan = (Int32)cmd_vegan.ExecuteScalar();
+                int numberofbus = (Int32)cmd_bus.ExecuteScalar();
+
+                lblFindMeTheTotalCheapestQuote.Visible = true;
+                lblFindMeTheTotalCheapestQuote.Text = "alcohol=" + numberofalcoholdrinker.ToString() + " regular=" + numberofregular.ToString() + " vegeterian=" + numberofvegeterian.ToString() + " vegan=" + numberofvegan.ToString() + " bus=" + numberofbus.ToString();   
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
     
 }

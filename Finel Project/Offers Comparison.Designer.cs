@@ -47,6 +47,8 @@
             this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
             this.sUPPLIERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.SUPPLIERSTableAdapter();
             this.lblComparison = new System.Windows.Forms.Label();
+            this.btnFindMeTheTotalCheapestQuote = new System.Windows.Forms.Button();
+            this.lblFindMeTheTotalCheapestQuote = new System.Windows.Forms.Label();
             this.msSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sUPPLIERSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
@@ -71,7 +73,7 @@
             this.tsmOptionToComprise});
             this.msSelect.Location = new System.Drawing.Point(0, 0);
             this.msSelect.Name = "msSelect";
-            this.msSelect.Size = new System.Drawing.Size(470, 28);
+            this.msSelect.Size = new System.Drawing.Size(470, 30);
             this.msSelect.TabIndex = 54;
             this.msSelect.Text = "select option to compare";
             // 
@@ -84,7 +86,7 @@
             this.priceForAlcoholToolStripMenuItem,
             this.priceForBusToolStripMenuItem});
             this.tsmOptionToComprise.Name = "tsmOptionToComprise";
-            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 24);
+            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 26);
             this.tsmOptionToComprise.Text = "option to comprise";
             // 
             // priceForRegularToolStripMenuItem
@@ -207,11 +209,35 @@
             this.lblComparison.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblComparison.Visible = false;
             // 
+            // btnFindMeTheTotalCheapestQuote
+            // 
+            this.btnFindMeTheTotalCheapestQuote.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnFindMeTheTotalCheapestQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnFindMeTheTotalCheapestQuote.Location = new System.Drawing.Point(12, 228);
+            this.btnFindMeTheTotalCheapestQuote.Name = "btnFindMeTheTotalCheapestQuote";
+            this.btnFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 37);
+            this.btnFindMeTheTotalCheapestQuote.TabIndex = 62;
+            this.btnFindMeTheTotalCheapestQuote.Text = "Find me the total cheapest quote";
+            this.btnFindMeTheTotalCheapestQuote.UseVisualStyleBackColor = false;
+            this.btnFindMeTheTotalCheapestQuote.Click += new System.EventHandler(this.btnFindMeTheTotalCheapestQuote_Click);
+            // 
+            // lblFindMeTheTotalCheapestQuote
+            // 
+            this.lblFindMeTheTotalCheapestQuote.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblFindMeTheTotalCheapestQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblFindMeTheTotalCheapestQuote.Location = new System.Drawing.Point(12, 281);
+            this.lblFindMeTheTotalCheapestQuote.Name = "lblFindMeTheTotalCheapestQuote";
+            this.lblFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 56);
+            this.lblFindMeTheTotalCheapestQuote.TabIndex = 63;
+            this.lblFindMeTheTotalCheapestQuote.Visible = false;
+            // 
             // OffersComparison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 450);
+            this.Controls.Add(this.lblFindMeTheTotalCheapestQuote);
+            this.Controls.Add(this.btnFindMeTheTotalCheapestQuote);
             this.Controls.Add(this.lblComparison);
             this.Controls.Add(this.lblprice3);
             this.Controls.Add(this.lblprice2);
@@ -253,5 +279,7 @@
         private System.Windows.Forms.Label lblSupplier3;
         private System.Windows.Forms.Label lblSupplier1;
         private System.Windows.Forms.Label lblComparison;
+        private System.Windows.Forms.Button btnFindMeTheTotalCheapestQuote;
+        private System.Windows.Forms.Label lblFindMeTheTotalCheapestQuote;
     }
 }
