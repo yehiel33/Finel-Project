@@ -98,6 +98,7 @@
             this.btnDeleteGuest.TabIndex = 35;
             this.btnDeleteGuest.Text = "Delete Guest";
             this.btnDeleteGuest.UseVisualStyleBackColor = false;
+            this.btnDeleteGuest.Click += new System.EventHandler(this.btnDeleteGuest_Click);
             // 
             // btnRefresh
             // 

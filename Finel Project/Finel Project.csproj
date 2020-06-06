@@ -91,12 +91,6 @@
     <Compile Include="Cost Evaluation.Designer.cs">
       <DependentUpon>Cost Evaluation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Statistics.Designer.cs">
-      <DependentUpon>Statistics.cs</DependentUpon>
-    </Compile>
     <Compile Include="Seating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Event Seating Manager.resx">
       <DependentUpon>Event Seating Manager.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,9 +123,6 @@
     <EmbeddedResource Include="Cost Evaluation.resx">
       <DependentUpon>Cost Evaluation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistics.resx">
-      <DependentUpon>Statistics.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Seating.resx">
       <DependentUpon>Seating.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Finel_ProjectDataSet.xsc">
       <DependentUpon>Finel_ProjectDataSet.xsd</DependentUpon>
     </None>

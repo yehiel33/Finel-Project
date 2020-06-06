@@ -68,5 +68,10 @@ namespace Finel_Project
             dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner]='" + EventSeatingManager.globalusername + "'", "[Event Owner] Desc", DataViewRowState.CurrentRows);
             gUEST_LISTDataGridView.DataSource = dv;
         }
+
+        private void btnDeleteGuest_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
