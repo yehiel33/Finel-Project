@@ -85,12 +85,6 @@
     <Compile Include="Cost Evaluation.Designer.cs">
       <DependentUpon>Cost Evaluation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Statistics.Designer.cs">
-      <DependentUpon>Statistics.cs</DependentUpon>
-    </Compile>
     <Compile Include="Seating.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,9 +107,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cost Evaluation.resx">
       <DependentUpon>Cost Evaluation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Statistics.resx">
-      <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seating.resx">
       <DependentUpon>Seating.cs</DependentUpon>
