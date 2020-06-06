@@ -24,5 +24,10 @@ namespace Finel_Project
             EventSeatingManager eventseatingmanager = new EventSeatingManager();
             eventseatingmanager.ShowDialog();
         }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -110,6 +110,7 @@
             this.btnCalculate.TabIndex = 49;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // lblDesignCost
             // 

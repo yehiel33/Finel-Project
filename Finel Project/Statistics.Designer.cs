@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -42,18 +43,25 @@
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblDishType = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblMorF = new System.Windows.Forms.Label();
-            this.lblSide = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDishType)).BeginInit();
+            this.chartBus = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartSides = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartAlcohol = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDishType = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblBus = new System.Windows.Forms.Label();
+            this.lblSides = new System.Windows.Forms.Label();
+            this.lblAlcohol = new System.Windows.Forms.Label();
+            this.lblDishType = new System.Windows.Forms.Label();
+            this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
+            this.gUEST_LISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gUEST_LISTTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.GUEST_LISTTableAdapter();
+            this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSides)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlcohol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDishType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,160 +84,198 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // chart1
+            // chartBus
             // 
-            this.chart1.BackColor = System.Drawing.SystemColors.Control;
-            this.chart1.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            this.chart1.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
+            this.chartBus.BackColor = System.Drawing.SystemColors.Control;
+            this.chartBus.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            this.chartBus.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
             chartArea1.BackColor = System.Drawing.SystemColors.Control;
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartBus.ChartAreas.Add(chartArea1);
             legend1.BackColor = System.Drawing.SystemColors.Control;
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(273, 263);
-            this.chart1.Name = "chart1";
+            this.chartBus.Legends.Add(legend1);
+            this.chartBus.Location = new System.Drawing.Point(273, 263);
+            this.chartBus.Name = "chartBus";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(252, 169);
-            this.chart1.TabIndex = 52;
-            this.chart1.Text = "chart1";
+            this.chartBus.Series.Add(series1);
+            this.chartBus.Size = new System.Drawing.Size(252, 169);
+            this.chartBus.TabIndex = 52;
+            this.chartBus.Text = "chart1";
             // 
-            // chart2
+            // chartSides
             // 
-            this.chart2.BackColor = System.Drawing.SystemColors.Control;
-            this.chart2.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            this.chart2.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
+            this.chartSides.BackColor = System.Drawing.SystemColors.Control;
+            this.chartSides.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            this.chartSides.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
             chartArea2.BackColor = System.Drawing.SystemColors.Control;
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.chartSides.ChartAreas.Add(chartArea2);
             legend2.BackColor = System.Drawing.SystemColors.Control;
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(15, 61);
-            this.chart2.Name = "chart2";
+            this.chartSides.Legends.Add(legend2);
+            this.chartSides.Location = new System.Drawing.Point(15, 61);
+            this.chartSides.Name = "chartSides";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(252, 169);
-            this.chart2.TabIndex = 53;
-            this.chart2.Text = "chart2";
+            this.chartSides.Series.Add(series2);
+            this.chartSides.Size = new System.Drawing.Size(252, 169);
+            this.chartSides.TabIndex = 53;
+            this.chartSides.Text = "chartSides";
+            this.chartSides.Click += new System.EventHandler(this.chartSides_Click);
             // 
-            // chart3
+            // chartAlcohol
             // 
-            this.chart3.BackColor = System.Drawing.SystemColors.Control;
-            this.chart3.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            this.chart3.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
+            this.chartAlcohol.BackColor = System.Drawing.SystemColors.Control;
+            this.chartAlcohol.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            this.chartAlcohol.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
             chartArea3.BackColor = System.Drawing.SystemColors.Control;
             chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
+            this.chartAlcohol.ChartAreas.Add(chartArea3);
             legend3.BackColor = System.Drawing.SystemColors.Control;
             legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(15, 263);
-            this.chart3.Name = "chart3";
+            this.chartAlcohol.Legends.Add(legend3);
+            this.chartAlcohol.Location = new System.Drawing.Point(15, 263);
+            this.chartAlcohol.Name = "chartAlcohol";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(252, 169);
-            this.chart3.TabIndex = 54;
-            this.chart3.Text = "chart3";
+            this.chartAlcohol.Series.Add(series3);
+            this.chartAlcohol.Size = new System.Drawing.Size(252, 169);
+            this.chartAlcohol.TabIndex = 54;
+            this.chartAlcohol.Text = "chart3";
             // 
-            // lblDishType
+            // chartDishType
             // 
-            this.lblDishType.BackColor = System.Drawing.SystemColors.Control;
-            this.lblDishType.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
-            this.lblDishType.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
+            this.chartDishType.BackColor = System.Drawing.SystemColors.Control;
+            this.chartDishType.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
+            this.chartDishType.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
             chartArea4.BackColor = System.Drawing.SystemColors.Control;
             chartArea4.Name = "ChartArea1";
-            this.lblDishType.ChartAreas.Add(chartArea4);
+            this.chartDishType.ChartAreas.Add(chartArea4);
             legend4.BackColor = System.Drawing.SystemColors.Control;
             legend4.Name = "Legend1";
-            this.lblDishType.Legends.Add(legend4);
-            this.lblDishType.Location = new System.Drawing.Point(273, 61);
-            this.lblDishType.Name = "lblDishType";
+            this.chartDishType.Legends.Add(legend4);
+            this.chartDishType.Location = new System.Drawing.Point(273, 61);
+            this.chartDishType.Name = "chartDishType";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series4.Legend = "Legend1";
             series4.Name = "Series1";
-            this.lblDishType.Series.Add(series4);
-            this.lblDishType.Size = new System.Drawing.Size(252, 169);
-            this.lblDishType.TabIndex = 55;
-            this.lblDishType.Text = "chart4";
+            this.chartDishType.Series.Add(series4);
+            this.chartDishType.Size = new System.Drawing.Size(252, 169);
+            this.chartDishType.TabIndex = 55;
+            this.chartDishType.Text = "chart4";
             // 
-            // lblMorF
+            // lblBus
             // 
-            this.lblMorF.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblMorF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblMorF.Location = new System.Drawing.Point(273, 233);
-            this.lblMorF.Name = "lblMorF";
-            this.lblMorF.Size = new System.Drawing.Size(252, 27);
-            this.lblMorF.TabIndex = 56;
-            this.lblMorF.Text = "Male / Female";
-            this.lblMorF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBus.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblBus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblBus.Location = new System.Drawing.Point(273, 233);
+            this.lblBus.Name = "lblBus";
+            this.lblBus.Size = new System.Drawing.Size(252, 27);
+            this.lblBus.TabIndex = 56;
+            this.lblBus.Text = "Bus";
+            this.lblBus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblSide
+            // lblSides
             // 
-            this.lblSide.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblSide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblSide.Location = new System.Drawing.Point(15, 31);
-            this.lblSide.Name = "lblSide";
-            this.lblSide.Size = new System.Drawing.Size(252, 27);
-            this.lblSide.TabIndex = 57;
-            this.lblSide.Text = "Sides";
-            this.lblSide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSides.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSides.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblSides.Location = new System.Drawing.Point(15, 31);
+            this.lblSides.Name = "lblSides";
+            this.lblSides.Size = new System.Drawing.Size(252, 27);
+            this.lblSides.TabIndex = 57;
+            this.lblSides.Text = "Sides";
+            this.lblSides.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblAge
+            // lblAlcohol
             // 
-            this.lblAge.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblAge.Location = new System.Drawing.Point(15, 233);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(252, 27);
-            this.lblAge.TabIndex = 58;
-            this.lblAge.Text = "Age";
-            this.lblAge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAlcohol.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblAlcohol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblAlcohol.Location = new System.Drawing.Point(15, 233);
+            this.lblAlcohol.Name = "lblAlcohol";
+            this.lblAlcohol.Size = new System.Drawing.Size(252, 27);
+            this.lblAlcohol.TabIndex = 58;
+            this.lblAlcohol.Text = "Alcohol";
+            this.lblAlcohol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // lblDishType
             // 
-            this.label4.BackColor = System.Drawing.Color.DarkCyan;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.Location = new System.Drawing.Point(273, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(252, 27);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Dish Type";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDishType.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblDishType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblDishType.Location = new System.Drawing.Point(273, 31);
+            this.lblDishType.Name = "lblDishType";
+            this.lblDishType.Size = new System.Drawing.Size(252, 27);
+            this.lblDishType.TabIndex = 59;
+            this.lblDishType.Text = "Dish Type";
+            this.lblDishType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // finel_ProjectDataSet
+            // 
+            this.finel_ProjectDataSet.DataSetName = "Finel_ProjectDataSet";
+            this.finel_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gUEST_LISTBindingSource
+            // 
+            this.gUEST_LISTBindingSource.DataMember = "GUEST_LIST";
+            this.gUEST_LISTBindingSource.DataSource = this.finel_ProjectDataSet;
+            // 
+            // gUEST_LISTTableAdapter
+            // 
+            this.gUEST_LISTTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.EVENT_OWNERSTableAdapter = null;
+            this.tableAdapterManager.GUEST_LISTTableAdapter = this.gUEST_LISTTableAdapter;
+            this.tableAdapterManager.SUPPLIERSTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnRefresh.Location = new System.Drawing.Point(431, 463);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(129, 57);
+            this.btnRefresh.TabIndex = 60;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 534);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lblAge);
-            this.Controls.Add(this.lblSide);
-            this.Controls.Add(this.lblMorF);
+            this.ClientSize = new System.Drawing.Size(572, 540);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblDishType);
-            this.Controls.Add(this.chart3);
-            this.Controls.Add(this.chart2);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.lblAlcohol);
+            this.Controls.Add(this.lblSides);
+            this.Controls.Add(this.lblBus);
+            this.Controls.Add(this.chartDishType);
+            this.Controls.Add(this.chartAlcohol);
+            this.Controls.Add(this.chartSides);
+            this.Controls.Add(this.chartBus);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Name = "Statistics";
             this.Text = "Statistics";
             this.Load += new System.EventHandler(this.Statistics_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblDishType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartBus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSides)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartAlcohol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDishType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,13 +284,18 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart lblDishType;
-        private System.Windows.Forms.Label lblMorF;
-        private System.Windows.Forms.Label lblSide;
-        private System.Windows.Forms.Label lblAge;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartBus;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSides;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartAlcohol;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDishType;
+        private System.Windows.Forms.Label lblBus;
+        private System.Windows.Forms.Label lblSides;
+        private System.Windows.Forms.Label lblAlcohol;
+        private System.Windows.Forms.Label lblDishType;
+        private Finel_ProjectDataSet finel_ProjectDataSet;
+        private System.Windows.Forms.BindingSource gUEST_LISTBindingSource;
+        private Finel_ProjectDataSetTableAdapters.GUEST_LISTTableAdapter gUEST_LISTTableAdapter;
+        private Finel_ProjectDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
