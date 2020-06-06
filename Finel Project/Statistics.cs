@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb; //Access
 
 namespace Finel_Project
 {
@@ -24,6 +23,11 @@ namespace Finel_Project
             this.Hide();
             EventSeatingManager eventseatingmanager = new EventSeatingManager();
             eventseatingmanager.ShowDialog();
+        }
+
+        private void Statistics_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
