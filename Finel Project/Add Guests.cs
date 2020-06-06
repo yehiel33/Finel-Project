@@ -41,7 +41,7 @@ namespace Finel_Project
 
         private void btnDone_Click(object sender, EventArgs e)
         {
-            finel_ProjectDataSet.GUEST_LIST.AddGUEST_LISTRow(EventSeatingManager.globalusername, txtFirstName.Text, txtLastName.Text, txtPhoneNumber.Text, txtSide.Text, combDishType.Text, cbAlcohol.Checked, cbBus.Checked);
+            finel_ProjectDataSet.GUEST_LIST.AddGUEST_LISTRow(EventSeatingManager.globalusername, txtFirstName.Text, txtLastName.Text, txtPhoneNumber.Text, combSide.Text, combDishType.Text, cbAlcohol.Checked, cbBus.Checked);
             gUEST_LISTTableAdapter.Update(finel_ProjectDataSet);
             gUESTLISTBindingSource.EndEdit();
             tableAdapterManager.UpdateAll(finel_ProjectDataSet);

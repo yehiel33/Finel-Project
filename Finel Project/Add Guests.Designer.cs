@@ -36,7 +36,6 @@
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblSide = new System.Windows.Forms.Label();
-            this.txtSide = new System.Windows.Forms.TextBox();
             this.lblDishType = new System.Windows.Forms.Label();
             this.combDishType = new System.Windows.Forms.ComboBox();
             this.gUESTLISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,6 +47,7 @@
             this.btnDone = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
+            this.combSide = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gUESTLISTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gUESTLISTBindingSource1)).BeginInit();
@@ -122,14 +122,6 @@
             this.lblSide.Text = "Side";
             this.lblSide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtSide
-            // 
-            this.txtSide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.txtSide.Location = new System.Drawing.Point(151, 137);
-            this.txtSide.Name = "txtSide";
-            this.txtSide.Size = new System.Drawing.Size(174, 30);
-            this.txtSide.TabIndex = 63;
-            // 
             // lblDishType
             // 
             this.lblDishType.BackColor = System.Drawing.Color.DarkCyan;
@@ -148,7 +140,7 @@
             "רגיל",
             "צמחוני",
             "טבעוני"});
-            this.combDishType.Location = new System.Drawing.Point(151, 184);
+            this.combDishType.Location = new System.Drawing.Point(151, 183);
             this.combDishType.Name = "combDishType";
             this.combDishType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.combDishType.Size = new System.Drawing.Size(115, 24);
@@ -226,18 +218,31 @@
             this.tableAdapterManager.SUPPLIERSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // combSide
+            // 
+            this.combSide.FormattingEnabled = true;
+            this.combSide.Items.AddRange(new object[] {
+            "חתן",
+            "כלה",
+            "ללא"});
+            this.combSide.Location = new System.Drawing.Point(151, 143);
+            this.combSide.Name = "combSide";
+            this.combSide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.combSide.Size = new System.Drawing.Size(115, 24);
+            this.combSide.TabIndex = 74;
+            // 
             // AddGuest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 313);
+            this.Controls.Add(this.combSide);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.cbBus);
             this.Controls.Add(this.cbAlcohol);
             this.Controls.Add(this.combDishType);
             this.Controls.Add(this.lblDishType);
-            this.Controls.Add(this.txtSide);
             this.Controls.Add(this.lblSide);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.lblPhoneNumber);
@@ -265,7 +270,6 @@
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label lblSide;
-        private System.Windows.Forms.TextBox txtSide;
         private System.Windows.Forms.Label lblDishType;
         private System.Windows.Forms.ComboBox combDishType;
         private Finel_ProjectDataSet finel_ProjectDataSet;
@@ -277,5 +281,6 @@
         private System.Windows.Forms.Button btnDone;
         private System.Windows.Forms.Button btnCancel;
         private Finel_ProjectDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.ComboBox combSide;
     }
 }
