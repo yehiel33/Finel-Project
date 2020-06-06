@@ -122,7 +122,7 @@
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.Name = "Sides";
             this.chartSides.Series.Add(series2);
             this.chartSides.Size = new System.Drawing.Size(252, 169);
             this.chartSides.TabIndex = 53;
