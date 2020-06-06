@@ -12,10 +12,7 @@ namespace Finel_Project
 {
     public partial class EventSeatingManager : Form
     {
-        /*connection string
-         Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Public\Finel Project\Finel Project.accdb" 
-         */
-
+        //הגדרת משתנה גלובלי - שם בעל האירוע 
         public static string globalusername = "";
 
         public EventSeatingManager()
@@ -29,7 +26,7 @@ namespace Finel_Project
             this.Hide(); 
             SignIn signin= new SignIn();
             signin.ShowDialog();
-            
+            this.Hide();
         }
 
         private void btnCreateAccount_Click(object sender, EventArgs e)
@@ -50,7 +47,7 @@ namespace Finel_Project
             this.Hide();
         }
 
-        private void btnCostEvaluetion_Click(object sender, EventArgs e)
+        private void btnComparePrices_Click(object sender, EventArgs e)
         {
             //הסתרת החלון הנוכחי ומעבר לחלון אומדן עלויות
             this.Hide();
@@ -79,14 +76,18 @@ namespace Finel_Project
 
         private void EventSeatingManager_Load(object sender, EventArgs e)
         {
-            bool flag = SignIn.EnableBtnFlag;
+            //חלק זה מאפשר את השימוש בלחצנים שיהיו נעולים עד לרגע שיהיה משתמש רשום
+            
+            bool flag = SignIn.EnableBtnFlag; //הגדרת משתנה דגל שמקבל ערכים ממשתנה גלובלי בטופס - התחברות 
             if (flag == true)
             {
              btnGueasList.Enabled = true;
              btnComparePrices.Enabled = true;
              btnSeating.Enabled = true;
              btnStatistics.Enabled = true;
-             lblWelcome.Text = "Welcome " + globalusername + " !";
+             btnSignIn.Enabled = false;
+             btnCreateAccount.Enabled = false;
+             lblWelcome.Text = "Welcome " + globalusername + " !"; //הצגת שם בעל האירוע
             }
             
 

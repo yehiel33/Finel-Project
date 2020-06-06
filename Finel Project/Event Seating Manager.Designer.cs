@@ -110,7 +110,7 @@
             this.btnComparePrices.TabIndex = 34;
             this.btnComparePrices.Text = "Compare Prices";
             this.btnComparePrices.UseVisualStyleBackColor = false;
-            this.btnComparePrices.Click += new System.EventHandler(this.btnCostEvaluetion_Click);
+            this.btnComparePrices.Click += new System.EventHandler(this.btnComparePrices_Click);
             // 
             // btnGueasList
             // 

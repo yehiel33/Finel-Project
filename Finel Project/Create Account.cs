@@ -26,33 +26,34 @@ namespace Finel_Project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            //חזרה לחלון הראשי
+            //סגירת החללון הנוכחי ומעבר לחלון הראשי
             this.Hide();
             EventSeatingManager eventseatingmanager = new EventSeatingManager();
             eventseatingmanager.ShowDialog();
             this.Close();
         }
 
-        private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e) // פונקציה ראשונה שנוצרת בעת קישור הדטה בייס לקוד
+        private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e) 
+        //כל השורות בשיטה זו נוצרות אוטומטית בעת קישור לבסיס הנתונים
         {
             this.Validate();
             this.eVENT_OWNERSBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
         }
 
-        private void CreateAccount_Load(object sender, EventArgs e) // פונקציה מספר שנייה שנוצרת בעת קישור הדטה בייס לקוד
+        private void CreateAccount_Load(object sender, EventArgs e) 
+        //כל השורות בשיטה זו נוצרות אוטומטית בעת קישור לבסיס הנתונים
         {
             // TODO: This line of code loads data into the 'finel_ProjectDataSet.EVENT_OWNERS' table. You can move, or remove it, as needed.
             this.eVENT_OWNERSTableAdapter.Fill(this.finel_ProjectDataSet.EVENT_OWNERS);
-
         }
 
         private void btnCreateAcount_Click(object sender, EventArgs e)
+        //שיטה שבודקת אם פרטי המשתמש תקינים, במידה וכן, פרטי המשתמש יכתבו לטבלה של בעלי האירועים בבסיס הנתונים
         {
             if (txtUserName.Text == "" || txtPassword.Text == "")// בדיקה שהשדות לא ריקים
-            {
                 MessageBox.Show("Please insert User Name and Password");
-            }
+            
             else
             {
                 bool tryFlag = false; // משתנה שבודק אם הניסיון לכתוב לבסיס הנתונים הצליח
@@ -67,24 +68,22 @@ namespace Finel_Project
                     // מעדכן את בסיס הנתונים מול הדטה סט
                     tableAdapterManager.UpdateAll(finel_ProjectDataSet);
                     
-                    MessageBox.Show("Registration completed successfully!");
+                    MessageBox.Show("Registration completed successfully!");//הודעת הצלחה
                     tryFlag = true;
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(err.Message, "error");
+                    MessageBox.Show(err.Message, "error");//הודעת שגיאה
                     tryFlag = false;
-
                 }
                 if(tryFlag==true)
                 {
-                    //ניקויי שדות
-                    ClearText();
+                    ClearText();//קריאה לשיטה שיצרנו - ניקויי שדות
+                    //סגירת החלון הנוכחי ומעבר לחלון הזדהות
                     this.Close();
                     SignIn signin = new SignIn();
                     signin.ShowDialog();
                     this.Close();
-
                 }
             }
 
@@ -92,7 +91,7 @@ namespace Finel_Project
 
         private void cbShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            //הצגה וביטול הצגת סיסמא
+            //שיטה להצגה וביטול הצגת סיסמא
             if (cbShowPassword.Checked == true)
                 txtPassword.PasswordChar = (char)0;
             else
