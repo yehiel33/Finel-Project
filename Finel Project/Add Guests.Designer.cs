@@ -35,7 +35,7 @@
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.lblSideDish = new System.Windows.Forms.Label();
+            this.lblSide = new System.Windows.Forms.Label();
             this.txtSide = new System.Windows.Forms.TextBox();
             this.lblDishType = new System.Windows.Forms.Label();
             this.combDishType = new System.Windows.Forms.ComboBox();
@@ -111,16 +111,16 @@
             this.txtPhoneNumber.Size = new System.Drawing.Size(174, 30);
             this.txtPhoneNumber.TabIndex = 61;
             // 
-            // lblSideDish
+            // lblSide
             // 
-            this.lblSideDish.BackColor = System.Drawing.Color.DarkCyan;
-            this.lblSideDish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblSideDish.Location = new System.Drawing.Point(12, 137);
-            this.lblSideDish.Name = "lblSideDish";
-            this.lblSideDish.Size = new System.Drawing.Size(133, 30);
-            this.lblSideDish.TabIndex = 62;
-            this.lblSideDish.Text = "Side Dish";
-            this.lblSideDish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSide.BackColor = System.Drawing.Color.DarkCyan;
+            this.lblSide.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblSide.Location = new System.Drawing.Point(12, 137);
+            this.lblSide.Name = "lblSide";
+            this.lblSide.Size = new System.Drawing.Size(133, 30);
+            this.lblSide.TabIndex = 62;
+            this.lblSide.Text = "Side";
+            this.lblSide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSide
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.combDishType);
             this.Controls.Add(this.lblDishType);
             this.Controls.Add(this.txtSide);
-            this.Controls.Add(this.lblSideDish);
+            this.Controls.Add(this.lblSide);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.txtLastName);
@@ -264,7 +264,7 @@
         private System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.Label lblSideDish;
+        private System.Windows.Forms.Label lblSide;
         private System.Windows.Forms.TextBox txtSide;
         private System.Windows.Forms.Label lblDishType;
         private System.Windows.Forms.ComboBox combDishType;

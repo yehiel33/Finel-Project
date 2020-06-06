@@ -63,7 +63,8 @@ namespace Finel_Project
             //dv.Table = finel_ProjectDataSet.Tables[1];
             //dv.RowFilter = "Event Owner = 'OOkun'"; EventSeatingManager.globalusername;
             //gUEST_LISTDataGridView.DataSource = dv;
-            DataView dv;
+            this.gUEST_LISTTableAdapter.Fill(this.finel_ProjectDataSet.GUEST_LIST);//תוען שוב את רשימת האורחים
+            DataView dv;//מסנן שוב את רשימת האורחים
             dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner]='" + EventSeatingManager.globalusername + "'", "[Event Owner] Desc", DataViewRowState.CurrentRows);
             gUEST_LISTDataGridView.DataSource = dv;
         }
