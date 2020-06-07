@@ -100,11 +100,11 @@
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Bus";
             this.chartBus.Series.Add(series1);
             this.chartBus.Size = new System.Drawing.Size(252, 169);
             this.chartBus.TabIndex = 52;
-            this.chartBus.Text = "chart1";
+            this.chartBus.Text = "chartBus";
             // 
             // chartSides
             // 
@@ -122,7 +122,8 @@
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
-            series2.Name = "Sides";
+            series2.Name = "Side";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             this.chartSides.Series.Add(series2);
             this.chartSides.Size = new System.Drawing.Size(252, 169);
             this.chartSides.TabIndex = 53;
@@ -145,11 +146,11 @@
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
-            series3.Name = "Series1";
+            series3.Name = "Alcohol";
             this.chartAlcohol.Series.Add(series3);
             this.chartAlcohol.Size = new System.Drawing.Size(252, 169);
             this.chartAlcohol.TabIndex = 54;
-            this.chartAlcohol.Text = "chart3";
+            this.chartAlcohol.Text = "chartAlcohol";
             // 
             // chartDishType
             // 
@@ -166,12 +167,13 @@
             this.chartDishType.Name = "chartDishType";
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.LabelFormat = "#PERCENT";
             series4.Legend = "Legend1";
-            series4.Name = "Series1";
+            series4.Name = "Dish";
             this.chartDishType.Series.Add(series4);
             this.chartDishType.Size = new System.Drawing.Size(252, 169);
             this.chartDishType.TabIndex = 55;
-            this.chartDishType.Text = "chart4";
+            this.chartDishType.Text = "chartDishType";
             // 
             // lblBus
             // 
@@ -243,7 +245,7 @@
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnRefresh.Location = new System.Drawing.Point(431, 463);
+            this.btnRefresh.Location = new System.Drawing.Point(410, 463);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(129, 57);
             this.btnRefresh.TabIndex = 60;
@@ -255,7 +257,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 540);
+            this.ClientSize = new System.Drawing.Size(551, 540);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblDishType);
             this.Controls.Add(this.lblAlcohol);
