@@ -54,7 +54,6 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(246, 30);
             this.txtUserName.TabIndex = 47;
-            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // eVENT_OWNERSBindingSource
             // 

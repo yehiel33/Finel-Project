@@ -31,7 +31,7 @@ namespace Finel_Project
             eventseatingmanager.ShowDialog();
             this.Hide();
         }
-       private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void eVENT_OWNERSBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         //כל השורות בשיטה זו נוצרות אוטומטית בעת קישור לבסיס הנתונים
         {
             this.Validate();
@@ -52,26 +52,26 @@ namespace Finel_Project
         //שיטה זו מוודאת הזנת פרטים כראויי ומבצעת הזדהות מול בסיס הנתונים
         {
             if (txtUserName.Text == "" || txtPassword.Text == "")
-                 MessageBox.Show("please insert user name and password");//הודעת שגיאה שתקפוץ אם לא הוזנו שם משתמש וסיסמא
-            
+                MessageBox.Show("please insert user name and password");//הודעת שגיאה שתקפוץ אם לא הוזנו שם משתמש וסיסמא
+
 
             bool tryFlag = false; // משתנה שבודק אם הניסיון לכתוב לבסיס הנתונים הצליח
-            
+
             try
             {
                 //יצירת אוקייבט בשם "טייבל-אדפטר" שנקרא יוזר
                 Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter user = new Finel_ProjectDataSetTableAdapters.EVENT_OWNERSTableAdapter();
                 //ישנה פניה לשיטה "גט יוזר..." השיטה מקבלת את שם המשתמש והסיסמא שהוזנו ושולפת לתוך "דטה-טייבל" את כל הרשומות שנמצאו
                 Finel_ProjectDataSet.EVENT_OWNERSDataTable dt = user.GetDataByUserNameAndPassword(txtUserName.Text, txtPassword.Text);
-                
-                if(dt.Rows.Count==1)//במידה וקיימת רשומה אחת בלבד תתבצע הזדהות
+
+                if (dt.Rows.Count == 1)//במידה וקיימת רשומה אחת בלבד תתבצע הזדהות
                 {
                     EventSeatingManager.globalusername = txtUserName.Text;
                     EnableBtnFlag = true;
                     tryFlag = true;
                 }
-               
-                else if(dt.Rows.Count>1)//במידה וקיימת יותר מרשומה אחת תקפוץ התראה - כנראה שיש בעיה ויש שם משתמש כפול
+
+                else if (dt.Rows.Count > 1)//במידה וקיימת יותר מרשומה אחת תקפוץ התראה - כנראה שיש בעיה ויש שם משתמש כפול
                 {
                     MessageBox.Show("Duplicate User Name!");
                     tryFlag = false;
@@ -83,12 +83,12 @@ namespace Finel_Project
                 }
             }
             //הודעת שגיאה במידה והעבודה מול "הדטה-בייס" לא התבצעה כנדרש
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            if(tryFlag ==true)
+            if (tryFlag == true)
             //סגירת החלון הנוכחי וחזרה לחלון הראשי
             {
 
@@ -97,12 +97,11 @@ namespace Finel_Project
                 eventseatingmanager.ShowDialog();
                 this.Close();
             }
-            
-            
+
+
         }
 
-       
+
     }
-    }
-    }
+}
 
