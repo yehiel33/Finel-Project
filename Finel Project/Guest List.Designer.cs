@@ -153,7 +153,7 @@
             this.gUEST_LISTDataGridView.Name = "gUEST_LISTDataGridView";
             this.gUEST_LISTDataGridView.RowHeadersWidth = 51;
             this.gUEST_LISTDataGridView.RowTemplate.Height = 24;
-            this.gUEST_LISTDataGridView.Size = new System.Drawing.Size(1055, 274);
+            this.gUEST_LISTDataGridView.Size = new System.Drawing.Size(930, 274);
             this.gUEST_LISTDataGridView.TabIndex = 39;
             this.gUEST_LISTDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gUEST_LISTDataGridView_CellContentClick);
             // 
@@ -172,6 +172,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Event Owner";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
@@ -234,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 489);
+            this.ClientSize = new System.Drawing.Size(931, 489);
             this.Controls.Add(this.gUEST_LISTDataGridView);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);

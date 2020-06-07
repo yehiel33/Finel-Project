@@ -37,13 +37,15 @@ namespace Finel_Project
         {
             // TODO: This line of code loads data into the 'finel_ProjectDataSet.GUEST_LIST' table. You can move, or remove it, as needed.
             this.gUEST_LISTTableAdapter.Fill(this.finel_ProjectDataSet.GUEST_LIST);
+
+            DataView dv;//גורם להצגה של כל האורחים של המשתמש שכרגע רשום
+            dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner]='" + EventSeatingManager.globalusername + "'", "[Event Owner] Desc", DataViewRowState.CurrentRows);
+            gUEST_LISTDataGridView.DataSource = dv;
+
             //DataView dv = new DataView();
             //dv.Table = finel_ProjectDataSet.Tables[1];
             //dv.RowFilter = "Event Owner =" + EventSeatingManager.globalusername;
             //gUEST_LISTDataGridView.DataSource = dv;
-            DataView dv;
-            dv = new DataView(finel_ProjectDataSet.Tables[1], "[Event Owner]='" + EventSeatingManager.globalusername + "'", "[Event Owner] Desc", DataViewRowState.CurrentRows);
-            gUEST_LISTDataGridView.DataSource = dv;
         }
 
         private void btnAddGuest_Click(object sender, EventArgs e)
@@ -71,7 +73,20 @@ namespace Finel_Project
 
         private void btnDeleteGuest_Click(object sender, EventArgs e)
         {
+            try
+            {
+                gUEST_LISTDataGridView.Rows.RemoveAt(gUEST_LISTDataGridView.SelectedRows[0].Index);
+                gUEST_LISTTableAdapter.Update(finel_ProjectDataSet);
+                gUEST_LISTBindingSource.EndEdit();
+                tableAdapterManager.UpdateAll(finel_ProjectDataSet);
 
+                MessageBox.Show("Guest Removed.");
+            }
+            catch
+            {
+                MessageBox.Show("Please select the row of the guest that you want to remove.");
+            }
+            
         }
     }
 }
