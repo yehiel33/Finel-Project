@@ -33,7 +33,7 @@
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnSeating = new System.Windows.Forms.Button();
             this.btnStatistics = new System.Windows.Forms.Button();
-            this.btnCostEvaluetion = new System.Windows.Forms.Button();
+            this.btnComparePrices = new System.Windows.Forms.Button();
             this.btnGueasList = new System.Windows.Forms.Button();
             this.lblEventSeatingManager = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -100,18 +100,18 @@
             this.btnStatistics.UseVisualStyleBackColor = false;
             this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
-            // btnCostEvaluetion
+            // btnComparePrices
             // 
-            this.btnCostEvaluetion.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnCostEvaluetion.Enabled = false;
-            this.btnCostEvaluetion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnCostEvaluetion.Location = new System.Drawing.Point(219, 250);
-            this.btnCostEvaluetion.Name = "btnCostEvaluetion";
-            this.btnCostEvaluetion.Size = new System.Drawing.Size(158, 123);
-            this.btnCostEvaluetion.TabIndex = 34;
-            this.btnCostEvaluetion.Text = "Cost Evaluation";
-            this.btnCostEvaluetion.UseVisualStyleBackColor = false;
-            this.btnCostEvaluetion.Click += new System.EventHandler(this.btnCostEvaluetion_Click);
+            this.btnComparePrices.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnComparePrices.Enabled = false;
+            this.btnComparePrices.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnComparePrices.Location = new System.Drawing.Point(219, 250);
+            this.btnComparePrices.Name = "btnComparePrices";
+            this.btnComparePrices.Size = new System.Drawing.Size(158, 123);
+            this.btnComparePrices.TabIndex = 34;
+            this.btnComparePrices.Text = "Compare Prices";
+            this.btnComparePrices.UseVisualStyleBackColor = false;
+            this.btnComparePrices.Click += new System.EventHandler(this.btnComparePrices_Click);
             // 
             // btnGueasList
             // 
@@ -149,7 +149,7 @@
             this.Controls.Add(this.btnCreateAccount);
             this.Controls.Add(this.btnSeating);
             this.Controls.Add(this.btnStatistics);
-            this.Controls.Add(this.btnCostEvaluetion);
+            this.Controls.Add(this.btnComparePrices);
             this.Controls.Add(this.btnGueasList);
             this.Controls.Add(this.lblEventSeatingManager);
             this.Name = "EventSeatingManager";
@@ -166,7 +166,7 @@
         private System.Windows.Forms.Button btnCreateAccount;
         private System.Windows.Forms.Button btnSeating;
         private System.Windows.Forms.Button btnStatistics;
-        private System.Windows.Forms.Button btnCostEvaluetion;
+        private System.Windows.Forms.Button btnComparePrices;
         private System.Windows.Forms.Button btnGueasList;
         private System.Windows.Forms.Label lblEventSeatingManager;
     }
