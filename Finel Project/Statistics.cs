@@ -56,6 +56,17 @@ namespace Finel_Project
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            int number_alcoholdrinkers = 0;
+            int number_nonalcoholdrinkers = 0;
+            int number_regular = 0;
+            int number_vegeterian = 0;
+            int number_vegan = 0;
+            int number_bus = 0;
+            int number_nobus = 0;
+            int number_groom = 0;
+            int number_bride = 0;
+            int number_none = 0;
+
             // הגדרת מחרוזת שמכילה את פקודת החיבור
             string strDb = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = C:\Users\Public\Finel Project\Finel Project.accdb;" + "Persist Security Info=False";
             // יצירת חיבור חדש לבסיס הנתונים
@@ -67,13 +78,24 @@ namespace Finel_Project
             OleDbCommand cmd_vegan = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Dish Type]='טבעוני' ;", conn);
             OleDbCommand cmd_bus = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [bus]=true ;", conn);
             OleDbCommand cmd_nobus = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [bus]=false ;", conn);
-            OleDbCommand cmd_Groom = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='חתן' ;", conn);
-            OleDbCommand cmd_Bride = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='כלה' ;", conn);
-            OleDbCommand cmd_None = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='ללא' ;", conn);
+            OleDbCommand cmd_groom = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='חתן' ;", conn);
+            OleDbCommand cmd_bride = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='כלה' ;", conn);
+            OleDbCommand cmd_none = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='ללא' ;", conn);
 
             conn.Open();
+            number_alcoholdrinkers = (Int32)cmd_alcoholdrinker.ExecuteNonQuery();
+            number_nonalcoholdrinkers = (Int32)cmd_nonalcoholdrinker.ExecuteNonQuery();
+            number_regular = (Int32)cmd_regular.ExecuteNonQuery();
+            number_vegeterian = (Int32)cmd_vegeterian.ExecuteNonQuery();
+            number_vegan = (Int32)cmd_vegan.ExecuteNonQuery();
+            number_bus = (Int32)cmd_bus.ExecuteNonQuery();
+            number_nobus = (Int32)cmd_nobus.ExecuteNonQuery();
+            number_groom = (Int32)cmd_groom.ExecuteNonQuery();
+            number_bride = (Int32)cmd_bride.ExecuteNonQuery();
+            number_none = (Int32)cmd_none.ExecuteNonQuery();
+
             chartSides.Series["Side"].XValueMember = "Side";
-            chartSides.Series["Side"].YValueMembers = (Int32)cmd_Groom.ExecuteNonQuery();
+            chartSides.Series["Side"].YValueMembers = number_groom;
         }
     }
 }
