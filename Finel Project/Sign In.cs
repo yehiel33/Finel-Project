@@ -80,17 +80,20 @@ namespace Finel_Project
             }
             if(tryFlag ==true)
             {
-                this.Close();
+                //public static string UserName = txtUserName.Text;
+                this.Hide();
                 EventSeatingManager eventseatingmanager = new EventSeatingManager();
                 eventseatingmanager.ShowDialog();
-                this.Close();
+                //this.Close();
             }
             
             
         }
-        
 
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
     }
 

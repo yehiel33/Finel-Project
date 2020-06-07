@@ -29,29 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GuestList));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddGuest = new System.Windows.Forms.Button();
             this.btnDeleteGuest = new System.Windows.Forms.Button();
-            this.btnShowAllGuests = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.finel_ProjectDataSet = new Finel_Project.Finel_ProjectDataSet();
             this.gUEST_LISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gUEST_LISTTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.GUEST_LISTTableAdapter();
             this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
-            this.gUEST_LISTBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.gUEST_LISTBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.gUEST_LISTDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,8 +50,6 @@
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingNavigator)).BeginInit();
-            this.gUEST_LISTBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +86,7 @@
             this.btnAddGuest.TabIndex = 36;
             this.btnAddGuest.Text = "Add Guest";
             this.btnAddGuest.UseVisualStyleBackColor = false;
+            this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             // 
             // btnDeleteGuest
             // 
@@ -113,17 +98,19 @@
             this.btnDeleteGuest.TabIndex = 35;
             this.btnDeleteGuest.Text = "Delete Guest";
             this.btnDeleteGuest.UseVisualStyleBackColor = false;
+            this.btnDeleteGuest.Click += new System.EventHandler(this.btnDeleteGuest_Click);
             // 
-            // btnShowAllGuests
+            // btnRefresh
             // 
-            this.btnShowAllGuests.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnShowAllGuests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnShowAllGuests.Location = new System.Drawing.Point(400, 280);
-            this.btnShowAllGuests.Name = "btnShowAllGuests";
-            this.btnShowAllGuests.Size = new System.Drawing.Size(182, 34);
-            this.btnShowAllGuests.TabIndex = 34;
-            this.btnShowAllGuests.Text = "Show All Guests";
-            this.btnShowAllGuests.UseVisualStyleBackColor = false;
+            this.btnRefresh.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.btnRefresh.Location = new System.Drawing.Point(400, 280);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(182, 34);
+            this.btnRefresh.TabIndex = 34;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnShowAllGuests_Click);
             // 
             // finel_ProjectDataSet
             // 
@@ -147,131 +134,6 @@
             this.tableAdapterManager.SUPPLIERSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // gUEST_LISTBindingNavigator
-            // 
-            this.gUEST_LISTBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.gUEST_LISTBindingNavigator.BindingSource = this.gUEST_LISTBindingSource;
-            this.gUEST_LISTBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.gUEST_LISTBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.gUEST_LISTBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.gUEST_LISTBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.gUEST_LISTBindingNavigatorSaveItem});
-            this.gUEST_LISTBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.gUEST_LISTBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.gUEST_LISTBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.gUEST_LISTBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.gUEST_LISTBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.gUEST_LISTBindingNavigator.Name = "gUEST_LISTBindingNavigator";
-            this.gUEST_LISTBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.gUEST_LISTBindingNavigator.Size = new System.Drawing.Size(688, 27);
-            this.gUEST_LISTBindingNavigator.TabIndex = 39;
-            this.gUEST_LISTBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // gUEST_LISTBindingNavigatorSaveItem
-            // 
-            this.gUEST_LISTBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.gUEST_LISTBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("gUEST_LISTBindingNavigatorSaveItem.Image")));
-            this.gUEST_LISTBindingNavigatorSaveItem.Name = "gUEST_LISTBindingNavigatorSaveItem";
-            this.gUEST_LISTBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.gUEST_LISTBindingNavigatorSaveItem.Text = "Save Data";
-            this.gUEST_LISTBindingNavigatorSaveItem.Click += new System.EventHandler(this.gUEST_LISTBindingNavigatorSaveItem_Click);
-            // 
             // gUEST_LISTDataGridView
             // 
             this.gUEST_LISTDataGridView.AutoGenerateColumns = false;
@@ -287,12 +149,13 @@
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewCheckBoxColumn2});
             this.gUEST_LISTDataGridView.DataSource = this.gUEST_LISTBindingSource;
-            this.gUEST_LISTDataGridView.Location = new System.Drawing.Point(0, 30);
+            this.gUEST_LISTDataGridView.Location = new System.Drawing.Point(0, 0);
             this.gUEST_LISTDataGridView.Name = "gUEST_LISTDataGridView";
             this.gUEST_LISTDataGridView.RowHeadersWidth = 51;
             this.gUEST_LISTDataGridView.RowTemplate.Height = 24;
-            this.gUEST_LISTDataGridView.Size = new System.Drawing.Size(685, 244);
+            this.gUEST_LISTDataGridView.Size = new System.Drawing.Size(930, 274);
             this.gUEST_LISTDataGridView.TabIndex = 39;
+            this.gUEST_LISTDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gUEST_LISTDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -309,6 +172,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Event Owner";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
             this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
@@ -349,7 +213,6 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Dish Type";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Visible = false;
             this.dataGridViewTextBoxColumn7.Width = 125;
             // 
             // dataGridViewCheckBoxColumn1
@@ -358,7 +221,6 @@
             this.dataGridViewCheckBoxColumn1.HeaderText = "Alcohol Drinker";
             this.dataGridViewCheckBoxColumn1.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.Visible = false;
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
             // dataGridViewCheckBoxColumn2
@@ -367,32 +229,26 @@
             this.dataGridViewCheckBoxColumn2.HeaderText = "Bus";
             this.dataGridViewCheckBoxColumn2.MinimumWidth = 6;
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
-            this.dataGridViewCheckBoxColumn2.Visible = false;
             this.dataGridViewCheckBoxColumn2.Width = 125;
             // 
             // GuestList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 489);
+            this.ClientSize = new System.Drawing.Size(931, 489);
             this.Controls.Add(this.gUEST_LISTDataGridView);
-            this.Controls.Add(this.gUEST_LISTBindingNavigator);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAddGuest);
             this.Controls.Add(this.btnDeleteGuest);
-            this.Controls.Add(this.btnShowAllGuests);
+            this.Controls.Add(this.btnRefresh);
             this.Name = "GuestList";
             this.Text = "Guest List";
             this.Load += new System.EventHandler(this.GuestList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingNavigator)).EndInit();
-            this.gUEST_LISTBindingNavigator.ResumeLayout(false);
-            this.gUEST_LISTBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -401,24 +257,11 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnAddGuest;
         private System.Windows.Forms.Button btnDeleteGuest;
-        private System.Windows.Forms.Button btnShowAllGuests;
+        private System.Windows.Forms.Button btnRefresh;
         private Finel_ProjectDataSet finel_ProjectDataSet;
         private System.Windows.Forms.BindingSource gUEST_LISTBindingSource;
         private Finel_ProjectDataSetTableAdapters.GUEST_LISTTableAdapter gUEST_LISTTableAdapter;
         private Finel_ProjectDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator gUEST_LISTBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton gUEST_LISTBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView gUEST_LISTDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
