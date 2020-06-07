@@ -71,8 +71,9 @@ namespace Finel_Project
             OleDbCommand cmd_Bride = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='כלה' ;", conn);
             OleDbCommand cmd_None = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='ללא' ;", conn);
 
+            conn.Open();
             chartSides.Series["Side"].XValueMember = "Side";
-            chartSides.Series["Side"].YValueMembers = 
+            chartSides.Series["Side"].YValueMembers = (Int32)cmd_Groom.ExecuteNonQuery();
         }
     }
 }
