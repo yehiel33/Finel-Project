@@ -180,7 +180,9 @@ namespace Finel_Project
             rb12seats.Checked = false;
 
             SaveFileDialog dlg = new SaveFileDialog();//הגדרת אובייקט ששומר כקובץ טקסט
-            if(dlg.ShowDialog()==DialogResult.OK)
+            dlg.Filter = "txt files (*.txt)|*.txt|All files(*.*)|*.*";
+
+            if (dlg.ShowDialog()==DialogResult.OK)
             {
                 //הזרמת רשימת האורחים שנוספו לשולחן לתוך קובץ הטקסט
                 StreamWriter writer = new StreamWriter(dlg.FileName);//הגדרת אובייקט 
