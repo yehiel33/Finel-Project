@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.chartBus = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -55,7 +55,6 @@
             this.gUEST_LISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gUEST_LISTTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.GUEST_LISTTableAdapter();
             this.tableAdapterManager = new Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartBus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSides)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartAlcohol)).BeginInit();
@@ -76,7 +75,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnBack.Location = new System.Drawing.Point(38, 463);
+            this.btnBack.Location = new System.Drawing.Point(12, 682);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 57);
             this.btnBack.TabIndex = 51;
@@ -89,20 +88,21 @@
             this.chartBus.BackColor = System.Drawing.SystemColors.Control;
             this.chartBus.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
             this.chartBus.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
-            chartArea1.BackColor = System.Drawing.SystemColors.Control;
-            chartArea1.Name = "ChartArea1";
-            this.chartBus.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.SystemColors.Control;
-            legend1.Name = "Legend1";
-            this.chartBus.Legends.Add(legend1);
-            this.chartBus.Location = new System.Drawing.Point(273, 263);
+            chartArea9.BackColor = System.Drawing.SystemColors.Control;
+            chartArea9.Name = "ChartArea1";
+            this.chartBus.ChartAreas.Add(chartArea9);
+            legend9.BackColor = System.Drawing.SystemColors.Control;
+            legend9.Enabled = false;
+            legend9.Name = "Legend1";
+            this.chartBus.Legends.Add(legend9);
+            this.chartBus.Location = new System.Drawing.Point(311, 385);
             this.chartBus.Name = "chartBus";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Bus";
-            this.chartBus.Series.Add(series1);
-            this.chartBus.Size = new System.Drawing.Size(252, 169);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series9.Legend = "Legend1";
+            series9.Name = "Bus";
+            this.chartBus.Series.Add(series9);
+            this.chartBus.Size = new System.Drawing.Size(291, 291);
             this.chartBus.TabIndex = 52;
             this.chartBus.Text = "chartBus";
             // 
@@ -111,21 +111,22 @@
             this.chartSides.BackColor = System.Drawing.SystemColors.Control;
             this.chartSides.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
             this.chartSides.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
-            chartArea2.BackColor = System.Drawing.SystemColors.Control;
-            chartArea2.Name = "ChartArea1";
-            this.chartSides.ChartAreas.Add(chartArea2);
-            legend2.BackColor = System.Drawing.SystemColors.Control;
-            legend2.Name = "Legend1";
-            this.chartSides.Legends.Add(legend2);
+            chartArea10.BackColor = System.Drawing.SystemColors.Control;
+            chartArea10.Name = "ChartArea1";
+            this.chartSides.ChartAreas.Add(chartArea10);
+            legend10.BackColor = System.Drawing.SystemColors.Control;
+            legend10.Enabled = false;
+            legend10.Name = "Legend1";
+            this.chartSides.Legends.Add(legend10);
             this.chartSides.Location = new System.Drawing.Point(15, 61);
             this.chartSides.Name = "chartSides";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Side";
-            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chartSides.Series.Add(series2);
-            this.chartSides.Size = new System.Drawing.Size(252, 169);
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series10.Legend = "Legend1";
+            series10.Name = "Side";
+            series10.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chartSides.Series.Add(series10);
+            this.chartSides.Size = new System.Drawing.Size(291, 291);
             this.chartSides.TabIndex = 53;
             this.chartSides.Text = "chartSides";
             this.chartSides.Click += new System.EventHandler(this.chartSides_Click);
@@ -135,20 +136,21 @@
             this.chartAlcohol.BackColor = System.Drawing.SystemColors.Control;
             this.chartAlcohol.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
             this.chartAlcohol.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
-            chartArea3.BackColor = System.Drawing.SystemColors.Control;
-            chartArea3.Name = "ChartArea1";
-            this.chartAlcohol.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.SystemColors.Control;
-            legend3.Name = "Legend1";
-            this.chartAlcohol.Legends.Add(legend3);
-            this.chartAlcohol.Location = new System.Drawing.Point(15, 263);
+            chartArea11.BackColor = System.Drawing.SystemColors.Control;
+            chartArea11.Name = "ChartArea1";
+            this.chartAlcohol.ChartAreas.Add(chartArea11);
+            legend11.BackColor = System.Drawing.SystemColors.Control;
+            legend11.Enabled = false;
+            legend11.Name = "Legend1";
+            this.chartAlcohol.Legends.Add(legend11);
+            this.chartAlcohol.Location = new System.Drawing.Point(15, 385);
             this.chartAlcohol.Name = "chartAlcohol";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Alcohol";
-            this.chartAlcohol.Series.Add(series3);
-            this.chartAlcohol.Size = new System.Drawing.Size(252, 169);
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series11.Legend = "Legend1";
+            series11.Name = "Alcohol";
+            this.chartAlcohol.Series.Add(series11);
+            this.chartAlcohol.Size = new System.Drawing.Size(291, 291);
             this.chartAlcohol.TabIndex = 54;
             this.chartAlcohol.Text = "chartAlcohol";
             // 
@@ -157,21 +159,22 @@
             this.chartDishType.BackColor = System.Drawing.SystemColors.Control;
             this.chartDishType.BorderSkin.BackSecondaryColor = System.Drawing.SystemColors.Control;
             this.chartDishType.BorderSkin.PageColor = System.Drawing.SystemColors.Control;
-            chartArea4.BackColor = System.Drawing.SystemColors.Control;
-            chartArea4.Name = "ChartArea1";
-            this.chartDishType.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.SystemColors.Control;
-            legend4.Name = "Legend1";
-            this.chartDishType.Legends.Add(legend4);
-            this.chartDishType.Location = new System.Drawing.Point(273, 61);
+            chartArea12.BackColor = System.Drawing.SystemColors.Control;
+            chartArea12.Name = "ChartArea1";
+            this.chartDishType.ChartAreas.Add(chartArea12);
+            legend12.BackColor = System.Drawing.SystemColors.Control;
+            legend12.Enabled = false;
+            legend12.Name = "Legend1";
+            this.chartDishType.Legends.Add(legend12);
+            this.chartDishType.Location = new System.Drawing.Point(311, 61);
             this.chartDishType.Name = "chartDishType";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.LabelFormat = "#PERCENT";
-            series4.Legend = "Legend1";
-            series4.Name = "Dish";
-            this.chartDishType.Series.Add(series4);
-            this.chartDishType.Size = new System.Drawing.Size(252, 169);
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series12.LabelFormat = "#PERCENT";
+            series12.Legend = "Legend1";
+            series12.Name = "Dish";
+            this.chartDishType.Series.Add(series12);
+            this.chartDishType.Size = new System.Drawing.Size(291, 291);
             this.chartDishType.TabIndex = 55;
             this.chartDishType.Text = "chartDishType";
             // 
@@ -179,9 +182,9 @@
             // 
             this.lblBus.BackColor = System.Drawing.Color.DarkCyan;
             this.lblBus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblBus.Location = new System.Drawing.Point(273, 233);
+            this.lblBus.Location = new System.Drawing.Point(311, 355);
             this.lblBus.Name = "lblBus";
-            this.lblBus.Size = new System.Drawing.Size(252, 27);
+            this.lblBus.Size = new System.Drawing.Size(291, 27);
             this.lblBus.TabIndex = 56;
             this.lblBus.Text = "Bus";
             this.lblBus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -192,7 +195,7 @@
             this.lblSides.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.lblSides.Location = new System.Drawing.Point(15, 31);
             this.lblSides.Name = "lblSides";
-            this.lblSides.Size = new System.Drawing.Size(252, 27);
+            this.lblSides.Size = new System.Drawing.Size(291, 27);
             this.lblSides.TabIndex = 57;
             this.lblSides.Text = "Sides";
             this.lblSides.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,9 +204,9 @@
             // 
             this.lblAlcohol.BackColor = System.Drawing.Color.DarkCyan;
             this.lblAlcohol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblAlcohol.Location = new System.Drawing.Point(15, 233);
+            this.lblAlcohol.Location = new System.Drawing.Point(15, 355);
             this.lblAlcohol.Name = "lblAlcohol";
-            this.lblAlcohol.Size = new System.Drawing.Size(252, 27);
+            this.lblAlcohol.Size = new System.Drawing.Size(291, 27);
             this.lblAlcohol.TabIndex = 58;
             this.lblAlcohol.Text = "Alcohol";
             this.lblAlcohol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,9 +215,9 @@
             // 
             this.lblDishType.BackColor = System.Drawing.Color.DarkCyan;
             this.lblDishType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblDishType.Location = new System.Drawing.Point(273, 31);
+            this.lblDishType.Location = new System.Drawing.Point(311, 31);
             this.lblDishType.Name = "lblDishType";
-            this.lblDishType.Size = new System.Drawing.Size(252, 27);
+            this.lblDishType.Size = new System.Drawing.Size(291, 27);
             this.lblDishType.TabIndex = 59;
             this.lblDishType.Text = "Dish Type";
             this.lblDishType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,24 +244,11 @@
             this.tableAdapterManager.SUPPLIERSTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Finel_Project.Finel_ProjectDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnRefresh.Location = new System.Drawing.Point(410, 463);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(129, 57);
-            this.btnRefresh.TabIndex = 60;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 540);
-            this.Controls.Add(this.btnRefresh);
+            this.ClientSize = new System.Drawing.Size(618, 750);
             this.Controls.Add(this.lblDishType);
             this.Controls.Add(this.lblAlcohol);
             this.Controls.Add(this.lblSides);
@@ -298,6 +288,5 @@
         private System.Windows.Forms.BindingSource gUEST_LISTBindingSource;
         private Finel_ProjectDataSetTableAdapters.GUEST_LISTTableAdapter gUEST_LISTTableAdapter;
         private Finel_ProjectDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }

@@ -31,7 +31,7 @@ namespace Finel_Project
             // TODO: This line of code loads data into the 'finel_ProjectDataSet.GUEST_LIST' table. You can move, or remove it, as needed.
             this.gUEST_LISTTableAdapter.Fill(this.finel_ProjectDataSet.GUEST_LIST);
 
-            int number_alcoholdrinkers = 0;
+            int number_alcoholdrinkers = 0;//מגדיר משתנים בשביל תרשימי העוגה
             int number_nonalcoholdrinkers = 0;
             int number_regular = 0;
             int number_vegeterian = 0;
@@ -57,54 +57,38 @@ namespace Finel_Project
             OleDbCommand cmd_bride = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='כלה' ;", conn);
             OleDbCommand cmd_none = new OleDbCommand("Select count (*) From GUEST_LIST where [Event Owner]='" + EventSeatingManager.globalusername + "' AND [Side]='ללא' ;", conn);
 
-            conn.Open();
-            number_alcoholdrinkers = (Int32)cmd_alcoholdrinker.ExecuteScalar();
-            number_nonalcoholdrinkers = (Int32)cmd_nonalcoholdrinker.ExecuteScalar();
-            number_regular = (Int32)cmd_regular.ExecuteScalar();
-            number_vegeterian = (Int32)cmd_vegeterian.ExecuteScalar();
-            number_vegan = (Int32)cmd_vegan.ExecuteScalar();
-            number_bus = (Int32)cmd_bus.ExecuteScalar();
-            number_nobus = (Int32)cmd_nobus.ExecuteScalar();
-            number_groom = (Int32)cmd_groom.ExecuteScalar();
-            number_bride = (Int32)cmd_bride.ExecuteScalar();
-            number_none = (Int32)cmd_none.ExecuteScalar();
+            try
+            {
+                conn.Open();
+                number_alcoholdrinkers = (Int32)cmd_alcoholdrinker.ExecuteScalar();//מעדכן את המשתנים לפי נתוני הדטה-בייס
+                number_nonalcoholdrinkers = (Int32)cmd_nonalcoholdrinker.ExecuteScalar();
+                number_regular = (Int32)cmd_regular.ExecuteScalar();
+                number_vegeterian = (Int32)cmd_vegeterian.ExecuteScalar();
+                number_vegan = (Int32)cmd_vegan.ExecuteScalar();
+                number_bus = (Int32)cmd_bus.ExecuteScalar();
+                number_nobus = (Int32)cmd_nobus.ExecuteScalar();
+                number_groom = (Int32)cmd_groom.ExecuteScalar();
+                number_bride = (Int32)cmd_bride.ExecuteScalar();
+                number_none = (Int32)cmd_none.ExecuteScalar();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-            chartSides.Series["Side"].Points.AddXY(((double)number_groom/(number_groom + number_bride + number_none))*100 + "%", number_groom);
-            chartSides.Series["Side"].Points.AddXY("כלה", number_bride);
-            chartSides.Series["Side"].Points.AddXY("ללא", number_none);
-            chartDishType.Series["Dish"].Points.AddXY("רגיל", number_regular);
-            chartDishType.Series["Dish"].Points.AddXY("צמחוני", number_vegeterian);
-            chartDishType.Series["Dish"].Points.AddXY("טבעוני", number_vegan);
-            chartAlcohol.Series["Alcohol"].Points.AddXY("כן", number_alcoholdrinkers);
-            chartAlcohol.Series["Alcohol"].Points.AddXY("לא", number_nonalcoholdrinkers);
-            chartBus.Series["Bus"].Points.AddXY("כן", number_bus);
-            chartBus.Series["Bus"].Points.AddXY("לא", number_nobus);
+            chartSides.Series["Side"].Points.AddXY("חתן-" + Math.Round((((double)number_groom / (number_groom + number_bride + number_none)) * 100), 2) + "%", number_groom);
+            chartSides.Series["Side"].Points.AddXY("כלה-" + Math.Round((((double)number_bride / (number_groom + number_bride + number_none)) * 100), 2) + "%", number_bride);
+            chartSides.Series["Side"].Points.AddXY("ללא-" + Math.Round((((double)number_none / (number_groom + number_bride + number_none)) * 100), 2) + "%", number_none);
+            chartDishType.Series["Dish"].Points.AddXY("רגיל-" + Math.Round((((double)number_regular / (number_regular + number_vegeterian + number_vegan)) * 100), 2) + "%", number_regular);
+            chartDishType.Series["Dish"].Points.AddXY("צמחוני-" + Math.Round((((double)number_vegeterian / (number_regular + number_vegeterian + number_vegan)) * 100), 2) + "%", number_vegeterian);
+            chartDishType.Series["Dish"].Points.AddXY("טבעוני-" + Math.Round((((double)number_vegan / (number_regular + number_vegeterian + number_vegan)) * 100), 2) + "%", number_vegan);
+            chartAlcohol.Series["Alcohol"].Points.AddXY("כן-" + Math.Round((((double)number_alcoholdrinkers / (number_alcoholdrinkers + number_nonalcoholdrinkers)) * 100), 2) + "%", number_alcoholdrinkers);
+            chartAlcohol.Series["Alcohol"].Points.AddXY("לא-" + Math.Round((((double)number_nonalcoholdrinkers / (number_alcoholdrinkers + number_nonalcoholdrinkers)) * 100), 2) + "%", number_nonalcoholdrinkers);
+            chartBus.Series["Bus"].Points.AddXY("כן-" + Math.Round((((double)number_bus / (number_bus + number_nobus)) * 100), 2) + "%", number_bus);
+            chartBus.Series["Bus"].Points.AddXY("לא-" + Math.Round((((double)number_nobus / (number_bus + number_nobus)) * 100), 2) + "%", number_nobus);
 
-        }
+            //("לא - " + Math.Round((((double)number_nobus / (number_bus + number_nobus)) * 100), 2) + "%", number_nobus);
 
-        private void chartSides_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gUEST_LISTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.gUEST_LISTBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
-
-        }
-
-        private void gUEST_LISTBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.gUEST_LISTBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
-
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
             /*int number_alcoholdrinkers = 0;
             int number_nonalcoholdrinkers = 0;
             int number_regular = 0;
@@ -150,6 +134,32 @@ namespace Finel_Project
             chartSides2.Series["Side"].Points[2].XValue = number_none;
             chartSides.Series["Side"].Y = number_groom;
             chartSides.Series["Side"].Y*/
+        }
+
+        private void chartSides_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gUEST_LISTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.gUEST_LISTBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
+
+        }
+
+        private void gUEST_LISTBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.gUEST_LISTBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.finel_ProjectDataSet);
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+           
             
         }
     }
