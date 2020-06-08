@@ -74,7 +74,7 @@
             this.tsmOptionToComprise});
             this.msSelect.Location = new System.Drawing.Point(0, 0);
             this.msSelect.Name = "msSelect";
-            this.msSelect.Size = new System.Drawing.Size(470, 28);
+            this.msSelect.Size = new System.Drawing.Size(470, 30);
             this.msSelect.TabIndex = 54;
             this.msSelect.Text = "select option to compare";
             // 
@@ -160,7 +160,7 @@
             this.lblSupplier2.Name = "lblSupplier2";
             this.lblSupplier2.Size = new System.Drawing.Size(129, 32);
             this.lblSupplier2.TabIndex = 56;
-            this.lblSupplier2.Text = "חיים מסיבות";
+            this.lblSupplier2.Text = "Supplier 3";
             this.lblSupplier2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSupplier3
@@ -171,7 +171,7 @@
             this.lblSupplier3.Name = "lblSupplier3";
             this.lblSupplier3.Size = new System.Drawing.Size(129, 32);
             this.lblSupplier3.TabIndex = 57;
-            this.lblSupplier3.Text = "קלאס אירועים";
+            this.lblSupplier3.Text = "Supplier 2";
             this.lblSupplier3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSupplier1
@@ -182,7 +182,7 @@
             this.lblSupplier1.Name = "lblSupplier1";
             this.lblSupplier1.Size = new System.Drawing.Size(132, 32);
             this.lblSupplier1.TabIndex = 55;
-            this.lblSupplier1.Text = "אא הפקות";
+            this.lblSupplier1.Text = "Supplier 1";
             this.lblSupplier1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sUPPLIERSBindingSource
