@@ -61,7 +61,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnBack.Location = new System.Drawing.Point(21, 811);
+            this.btnBack.Location = new System.Drawing.Point(12, 772);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 57);
             this.btnBack.TabIndex = 51;
@@ -72,9 +72,9 @@
             // cmbGuestList
             // 
             this.cmbGuestList.FormattingEnabled = true;
-            this.cmbGuestList.Location = new System.Drawing.Point(21, 494);
+            this.cmbGuestList.Location = new System.Drawing.Point(12, 465);
             this.cmbGuestList.Name = "cmbGuestList";
-            this.cmbGuestList.Size = new System.Drawing.Size(221, 24);
+            this.cmbGuestList.Size = new System.Drawing.Size(230, 24);
             this.cmbGuestList.TabIndex = 53;
             this.cmbGuestList.Visible = false;
             // 
@@ -82,9 +82,9 @@
             // 
             this.btnLoadGestList.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnLoadGestList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnLoadGestList.Location = new System.Drawing.Point(130, 438);
+            this.btnLoadGestList.Location = new System.Drawing.Point(12, 410);
             this.btnLoadGestList.Name = "btnLoadGestList";
-            this.btnLoadGestList.Size = new System.Drawing.Size(221, 34);
+            this.btnLoadGestList.Size = new System.Drawing.Size(230, 34);
             this.btnLoadGestList.TabIndex = 54;
             this.btnLoadGestList.Text = "Load Gest List";
             this.btnLoadGestList.UseVisualStyleBackColor = false;
@@ -149,9 +149,9 @@
             // 
             this.btnAddToTable.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnAddToTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnAddToTable.Location = new System.Drawing.Point(21, 556);
+            this.btnAddToTable.Location = new System.Drawing.Point(12, 527);
             this.btnAddToTable.Name = "btnAddToTable";
-            this.btnAddToTable.Size = new System.Drawing.Size(221, 34);
+            this.btnAddToTable.Size = new System.Drawing.Size(230, 34);
             this.btnAddToTable.TabIndex = 60;
             this.btnAddToTable.Text = "Add to table";
             this.btnAddToTable.UseVisualStyleBackColor = false;
@@ -162,9 +162,9 @@
             // 
             this.listTable.FormattingEnabled = true;
             this.listTable.ItemHeight = 16;
-            this.listTable.Location = new System.Drawing.Point(269, 494);
+            this.listTable.Location = new System.Drawing.Point(248, 465);
             this.listTable.Name = "listTable";
-            this.listTable.Size = new System.Drawing.Size(188, 228);
+            this.listTable.Size = new System.Drawing.Size(209, 228);
             this.listTable.TabIndex = 61;
             this.listTable.Visible = false;
             // 
@@ -172,11 +172,11 @@
             // 
             this.btnSaveTable.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnSaveTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnSaveTable.Location = new System.Drawing.Point(269, 750);
+            this.btnSaveTable.Location = new System.Drawing.Point(248, 708);
             this.btnSaveTable.Name = "btnSaveTable";
-            this.btnSaveTable.Size = new System.Drawing.Size(188, 57);
+            this.btnSaveTable.Size = new System.Drawing.Size(209, 41);
             this.btnSaveTable.TabIndex = 62;
-            this.btnSaveTable.Text = "Save Table";
+            this.btnSaveTable.Text = "Save Table As Text";
             this.btnSaveTable.UseVisualStyleBackColor = false;
             this.btnSaveTable.Visible = false;
             this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
@@ -208,7 +208,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 921);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(469, 897);
             this.Controls.Add(this.lblRecommendation);
             this.Controls.Add(this.btnOurRecommendation);
             this.Controls.Add(this.btnSaveTable);
