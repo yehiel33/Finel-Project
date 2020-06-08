@@ -48,7 +48,8 @@
             this.sUPPLIERSTableAdapter = new Finel_Project.Finel_ProjectDataSetTableAdapters.SUPPLIERSTableAdapter();
             this.lblComparison = new System.Windows.Forms.Label();
             this.btnFindMeTheTotalCheapestQuote = new System.Windows.Forms.Button();
-            this.lblFindMeTheTotalCheapestQuote = new System.Windows.Forms.Label();
+            this.lblBestPrice = new System.Windows.Forms.Label();
+            this.lblNotBestPrice = new System.Windows.Forms.Label();
             this.msSelect.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sUPPLIERSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
@@ -58,7 +59,7 @@
             // 
             this.btnBack.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.btnBack.Location = new System.Drawing.Point(17, 381);
+            this.btnBack.Location = new System.Drawing.Point(12, 405);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 57);
             this.btnBack.TabIndex = 52;
@@ -86,7 +87,7 @@
             this.priceForAlcoholToolStripMenuItem,
             this.priceForBusToolStripMenuItem});
             this.tsmOptionToComprise.Name = "tsmOptionToComprise";
-            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 26);
+            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 24);
             this.tsmOptionToComprise.Text = "option to comprise";
             // 
             // priceForRegularToolStripMenuItem
@@ -221,22 +222,35 @@
             this.btnFindMeTheTotalCheapestQuote.UseVisualStyleBackColor = false;
             this.btnFindMeTheTotalCheapestQuote.Click += new System.EventHandler(this.btnFindMeTheTotalCheapestQuote_Click);
             // 
-            // lblFindMeTheTotalCheapestQuote
+            // lblBestPrice
             // 
-            this.lblFindMeTheTotalCheapestQuote.BackColor = System.Drawing.Color.DodgerBlue;
-            this.lblFindMeTheTotalCheapestQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.lblFindMeTheTotalCheapestQuote.Location = new System.Drawing.Point(12, 281);
-            this.lblFindMeTheTotalCheapestQuote.Name = "lblFindMeTheTotalCheapestQuote";
-            this.lblFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 97);
-            this.lblFindMeTheTotalCheapestQuote.TabIndex = 63;
-            this.lblFindMeTheTotalCheapestQuote.Visible = false;
+            this.lblBestPrice.BackColor = System.Drawing.Color.LimeGreen;
+            this.lblBestPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblBestPrice.Location = new System.Drawing.Point(12, 278);
+            this.lblBestPrice.Name = "lblBestPrice";
+            this.lblBestPrice.Size = new System.Drawing.Size(446, 32);
+            this.lblBestPrice.TabIndex = 63;
+            this.lblBestPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBestPrice.Visible = false;
+            // 
+            // lblNotBestPrice
+            // 
+            this.lblNotBestPrice.BackColor = System.Drawing.Color.Firebrick;
+            this.lblNotBestPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.lblNotBestPrice.Location = new System.Drawing.Point(12, 312);
+            this.lblNotBestPrice.Name = "lblNotBestPrice";
+            this.lblNotBestPrice.Size = new System.Drawing.Size(446, 68);
+            this.lblNotBestPrice.TabIndex = 64;
+            this.lblNotBestPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotBestPrice.Visible = false;
             // 
             // OffersComparison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 450);
-            this.Controls.Add(this.lblFindMeTheTotalCheapestQuote);
+            this.ClientSize = new System.Drawing.Size(470, 474);
+            this.Controls.Add(this.lblNotBestPrice);
+            this.Controls.Add(this.lblBestPrice);
             this.Controls.Add(this.btnFindMeTheTotalCheapestQuote);
             this.Controls.Add(this.lblComparison);
             this.Controls.Add(this.lblprice3);
@@ -280,6 +294,7 @@
         private System.Windows.Forms.Label lblSupplier1;
         private System.Windows.Forms.Label lblComparison;
         private System.Windows.Forms.Button btnFindMeTheTotalCheapestQuote;
-        private System.Windows.Forms.Label lblFindMeTheTotalCheapestQuote;
+        private System.Windows.Forms.Label lblBestPrice;
+        private System.Windows.Forms.Label lblNotBestPrice;
     }
 }
