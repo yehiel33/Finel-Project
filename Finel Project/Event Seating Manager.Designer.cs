@@ -57,7 +57,7 @@
             this.btnSignIn.Location = new System.Drawing.Point(47, 171);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(157, 44);
-            this.btnSignIn.TabIndex = 38;
+            this.btnSignIn.TabIndex = 1;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
@@ -69,7 +69,7 @@
             this.btnCreateAccount.Location = new System.Drawing.Point(220, 171);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(157, 44);
-            this.btnCreateAccount.TabIndex = 37;
+            this.btnCreateAccount.TabIndex = 2;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
@@ -82,7 +82,7 @@
             this.btnSeating.Location = new System.Drawing.Point(219, 379);
             this.btnSeating.Name = "btnSeating";
             this.btnSeating.Size = new System.Drawing.Size(157, 123);
-            this.btnSeating.TabIndex = 36;
+            this.btnSeating.TabIndex = 6;
             this.btnSeating.Text = "Seating";
             this.btnSeating.UseVisualStyleBackColor = false;
             this.btnSeating.Click += new System.EventHandler(this.btnSeating_Click);
@@ -95,7 +95,7 @@
             this.btnStatistics.Location = new System.Drawing.Point(46, 379);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(157, 123);
-            this.btnStatistics.TabIndex = 35;
+            this.btnStatistics.TabIndex = 5;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = false;
             this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
@@ -108,7 +108,7 @@
             this.btnComparePrices.Location = new System.Drawing.Point(219, 250);
             this.btnComparePrices.Name = "btnComparePrices";
             this.btnComparePrices.Size = new System.Drawing.Size(158, 123);
-            this.btnComparePrices.TabIndex = 34;
+            this.btnComparePrices.TabIndex = 4;
             this.btnComparePrices.Text = "Compare Prices";
             this.btnComparePrices.UseVisualStyleBackColor = false;
             this.btnComparePrices.Click += new System.EventHandler(this.btnComparePrices_Click);
@@ -121,7 +121,7 @@
             this.btnGueasList.Location = new System.Drawing.Point(46, 250);
             this.btnGueasList.Name = "btnGueasList";
             this.btnGueasList.Size = new System.Drawing.Size(157, 123);
-            this.btnGueasList.TabIndex = 33;
+            this.btnGueasList.TabIndex = 3;
             this.btnGueasList.Text = "Guest List";
             this.btnGueasList.UseVisualStyleBackColor = false;
             this.btnGueasList.Click += new System.EventHandler(this.btnGueasList_Click);

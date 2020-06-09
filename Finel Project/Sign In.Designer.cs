@@ -53,7 +53,7 @@
             this.txtUserName.Location = new System.Drawing.Point(260, 138);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(246, 30);
-            this.txtUserName.TabIndex = 47;
+            this.txtUserName.TabIndex = 1;
             // 
             // eVENT_OWNERSBindingSource
             // 
@@ -84,7 +84,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(246, 30);
-            this.txtPassword.TabIndex = 48;
+            this.txtPassword.TabIndex = 2;
             // 
             // lblPassword
             // 
@@ -114,7 +114,7 @@
             this.btnSignIn.Location = new System.Drawing.Point(349, 265);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(157, 57);
-            this.btnSignIn.TabIndex = 49;
+            this.btnSignIn.TabIndex = 3;
             this.btnSignIn.Text = "Sign In";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
@@ -126,7 +126,7 @@
             this.btnBack.Location = new System.Drawing.Point(21, 265);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 57);
-            this.btnBack.TabIndex = 50;
+            this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);

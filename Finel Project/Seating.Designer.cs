@@ -64,7 +64,7 @@
             this.btnBack.Location = new System.Drawing.Point(12, 772);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 57);
-            this.btnBack.TabIndex = 51;
+            this.btnBack.TabIndex = 6;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -75,7 +75,7 @@
             this.cmbGuestList.Location = new System.Drawing.Point(12, 465);
             this.cmbGuestList.Name = "cmbGuestList";
             this.cmbGuestList.Size = new System.Drawing.Size(230, 24);
-            this.cmbGuestList.TabIndex = 53;
+            this.cmbGuestList.TabIndex = 3;
             this.cmbGuestList.Visible = false;
             // 
             // btnLoadGestList
@@ -85,7 +85,7 @@
             this.btnLoadGestList.Location = new System.Drawing.Point(12, 410);
             this.btnLoadGestList.Name = "btnLoadGestList";
             this.btnLoadGestList.Size = new System.Drawing.Size(230, 34);
-            this.btnLoadGestList.TabIndex = 54;
+            this.btnLoadGestList.TabIndex = 2;
             this.btnLoadGestList.Text = "Load Gest List";
             this.btnLoadGestList.UseVisualStyleBackColor = false;
             this.btnLoadGestList.Click += new System.EventHandler(this.btnLoadGestList_Click);
@@ -152,7 +152,7 @@
             this.btnAddToTable.Location = new System.Drawing.Point(12, 527);
             this.btnAddToTable.Name = "btnAddToTable";
             this.btnAddToTable.Size = new System.Drawing.Size(230, 34);
-            this.btnAddToTable.TabIndex = 60;
+            this.btnAddToTable.TabIndex = 4;
             this.btnAddToTable.Text = "Add to table";
             this.btnAddToTable.UseVisualStyleBackColor = false;
             this.btnAddToTable.Visible = false;
@@ -175,7 +175,7 @@
             this.btnSaveTable.Location = new System.Drawing.Point(248, 708);
             this.btnSaveTable.Name = "btnSaveTable";
             this.btnSaveTable.Size = new System.Drawing.Size(209, 41);
-            this.btnSaveTable.TabIndex = 62;
+            this.btnSaveTable.TabIndex = 5;
             this.btnSaveTable.Text = "Save Table As Text";
             this.btnSaveTable.UseVisualStyleBackColor = false;
             this.btnSaveTable.Visible = false;
@@ -188,7 +188,7 @@
             this.btnOurRecommendation.Location = new System.Drawing.Point(12, 84);
             this.btnOurRecommendation.Name = "btnOurRecommendation";
             this.btnOurRecommendation.Size = new System.Drawing.Size(245, 42);
-            this.btnOurRecommendation.TabIndex = 63;
+            this.btnOurRecommendation.TabIndex = 1;
             this.btnOurRecommendation.Text = " Our recommendation";
             this.btnOurRecommendation.UseVisualStyleBackColor = false;
             this.btnOurRecommendation.Click += new System.EventHandler(this.btnOurRecommendation_Click);

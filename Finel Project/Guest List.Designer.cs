@@ -60,7 +60,7 @@
             this.btnBack.Location = new System.Drawing.Point(26, 358);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 67);
-            this.btnBack.TabIndex = 38;
+            this.btnBack.TabIndex = 4;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -72,7 +72,7 @@
             this.btnExit.Location = new System.Drawing.Point(453, 358);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(129, 67);
-            this.btnExit.TabIndex = 37;
+            this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             // 
@@ -83,7 +83,7 @@
             this.btnAddGuest.Location = new System.Drawing.Point(27, 280);
             this.btnAddGuest.Name = "btnAddGuest";
             this.btnAddGuest.Size = new System.Drawing.Size(182, 34);
-            this.btnAddGuest.TabIndex = 36;
+            this.btnAddGuest.TabIndex = 1;
             this.btnAddGuest.Text = "Add Guest";
             this.btnAddGuest.UseVisualStyleBackColor = false;
             this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
@@ -95,7 +95,7 @@
             this.btnDeleteGuest.Location = new System.Drawing.Point(212, 280);
             this.btnDeleteGuest.Name = "btnDeleteGuest";
             this.btnDeleteGuest.Size = new System.Drawing.Size(182, 34);
-            this.btnDeleteGuest.TabIndex = 35;
+            this.btnDeleteGuest.TabIndex = 2;
             this.btnDeleteGuest.Text = "Delete Guest";
             this.btnDeleteGuest.UseVisualStyleBackColor = false;
             this.btnDeleteGuest.Click += new System.EventHandler(this.btnDeleteGuest_Click);
@@ -107,7 +107,7 @@
             this.btnRefresh.Location = new System.Drawing.Point(400, 280);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(182, 34);
-            this.btnRefresh.TabIndex = 34;
+            this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnShowAllGuests_Click);

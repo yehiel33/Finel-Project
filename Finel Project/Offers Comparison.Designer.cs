@@ -62,7 +62,7 @@
             this.btnBack.Location = new System.Drawing.Point(12, 405);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 57);
-            this.btnBack.TabIndex = 52;
+            this.btnBack.TabIndex = 2;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -74,7 +74,7 @@
             this.tsmOptionToComprise});
             this.msSelect.Location = new System.Drawing.Point(0, 0);
             this.msSelect.Name = "msSelect";
-            this.msSelect.Size = new System.Drawing.Size(470, 30);
+            this.msSelect.Size = new System.Drawing.Size(470, 28);
             this.msSelect.TabIndex = 54;
             this.msSelect.Text = "select option to compare";
             // 
@@ -217,7 +217,7 @@
             this.btnFindMeTheTotalCheapestQuote.Location = new System.Drawing.Point(12, 228);
             this.btnFindMeTheTotalCheapestQuote.Name = "btnFindMeTheTotalCheapestQuote";
             this.btnFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 37);
-            this.btnFindMeTheTotalCheapestQuote.TabIndex = 62;
+            this.btnFindMeTheTotalCheapestQuote.TabIndex = 1;
             this.btnFindMeTheTotalCheapestQuote.Text = "Find me the total cheapest quote";
             this.btnFindMeTheTotalCheapestQuote.UseVisualStyleBackColor = false;
             this.btnFindMeTheTotalCheapestQuote.Click += new System.EventHandler(this.btnFindMeTheTotalCheapestQuote_Click);
