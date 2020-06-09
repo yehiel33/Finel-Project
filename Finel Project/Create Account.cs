@@ -52,7 +52,7 @@ namespace Finel_Project
         //שיטה שבודקת אם פרטי המשתמש תקינים, במידה וכן, פרטי המשתמש יכתבו לטבלה של בעלי האירועים בבסיס הנתונים
         {
             if (txtUserName.Text == "" || txtPassword.Text == "")// בדיקה שהשדות לא ריקים
-                MessageBox.Show("Please insert User Name and Password");
+                MessageBox.Show("Please insert a User Name and Password");
             
             else
             {
@@ -73,7 +73,7 @@ namespace Finel_Project
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(err.Message, "error");//הודעת שגיאה
+                    MessageBox.Show(err.Message, "Error");//הודעת שגיאה
                     tryFlag = false;
                 }
                 if(tryFlag==true)

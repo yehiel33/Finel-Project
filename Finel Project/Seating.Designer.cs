@@ -86,7 +86,7 @@
             this.btnLoadGestList.Name = "btnLoadGestList";
             this.btnLoadGestList.Size = new System.Drawing.Size(230, 34);
             this.btnLoadGestList.TabIndex = 2;
-            this.btnLoadGestList.Text = "Load Gest List";
+            this.btnLoadGestList.Text = "Load Guest List";
             this.btnLoadGestList.UseVisualStyleBackColor = false;
             this.btnLoadGestList.Click += new System.EventHandler(this.btnLoadGestList_Click);
             // 
@@ -176,7 +176,7 @@
             this.btnSaveTable.Name = "btnSaveTable";
             this.btnSaveTable.Size = new System.Drawing.Size(209, 41);
             this.btnSaveTable.TabIndex = 5;
-            this.btnSaveTable.Text = "Save Table As Text";
+            this.btnSaveTable.Text = "Save This Table";
             this.btnSaveTable.UseVisualStyleBackColor = false;
             this.btnSaveTable.Visible = false;
             this.btnSaveTable.Click += new System.EventHandler(this.btnSaveTable_Click);
@@ -203,6 +203,7 @@
             this.lblRecommendation.Size = new System.Drawing.Size(439, 114);
             this.lblRecommendation.TabIndex = 64;
             this.lblRecommendation.Visible = false;
+            this.lblRecommendation.Click += new System.EventHandler(this.lblRecommendation_Click);
             // 
             // Seating
             // 

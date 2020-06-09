@@ -64,7 +64,7 @@ namespace Finel_Project
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally //תוספת אפשרית למבנה טריי וקאצ' מגדירה מה יקרה בכל מקרה
             {
@@ -139,32 +139,32 @@ namespace Finel_Project
                 //בדיקה אם שולחן של 8 הוא המתאים ביותר.  הצגת הודעה בהתאם
                 {
                     int numberoftables = (guestnumber / 8);
-                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nOur recommendation to you is to reserv " + numberoftables + " tables of 8 and one another table of 8 to " + modulo8 + " remaining guests.";
+                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nOur recommendation to you is to reserve " + numberoftables + " table(s) of 8 and one extra table of 8 for your " + modulo8 + " remaining guests.";
                 }
 
                 else if (modulo10<modulo8 && modulo10<modulo12)
                 //בדיקה אם שולחן של 10 הוא המתאים ביותר. הצגת הודעה בהתאם
                 {
                     int numberoftables = (guestnumber / 10);
-                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nOur recommendation to you is to reserv " + numberoftables + " tables of 10 and one another table of 8 to " + modulo10 + " remaining guests.";
+                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nOur recommendation to you is to reserve " + numberoftables + " table(s) of 10 and one extra table of 8 for your " + modulo10 + " remaining guests.";
                 }
                 
                 else if (modulo12 < modulo8 && modulo12 < modulo8)
                 //בדיקה אם שולחן של 12 הוא המתאים ביותר. הצגת הודעה בהתאם
                 {
                     int numberoftables = (guestnumber / 12);
-                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nOur recommendation to you is to reserv " + numberoftables + " tables of 12 and one another table of 8 to " + modulo12 + " remaining guests.";
+                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nOur recommendation to you is to reserve " + numberoftables + " table(s) of 12 and one extra table of 8 for your " + modulo12 + " remaining guests.";
                 }
                 else
                 //הודעת שגיאה
                 {
-                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nwe didn't find recommendation for you.";
+                    lblRecommendation.Text = "You have " + guestnumber + " guests on your guest list.\nWe didn't find a recommendation for you.";
                 }
 
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally //תוספת אפשרית למבנה טריי וקאצ' מגדירה מה יקרה בכל מקרה
             {
@@ -199,6 +199,9 @@ namespace Finel_Project
 
         }
 
-       
+        private void lblRecommendation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

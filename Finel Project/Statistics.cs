@@ -73,7 +73,7 @@ namespace Finel_Project
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             chartSides.Series["Side"].Points.AddXY("חתן-" + Math.Round((((double)number_groom / (number_groom + number_bride + number_none)) * 100), 2) + "%", number_groom);

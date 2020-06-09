@@ -70,7 +70,7 @@
             this.txtFirstName.Location = new System.Drawing.Point(151, 9);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(174, 30);
-            this.txtFirstName.TabIndex = 57;
+            this.txtFirstName.TabIndex = 1;
             this.txtFirstName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // lblLastName
@@ -90,7 +90,7 @@
             this.txtLastName.Location = new System.Drawing.Point(151, 52);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(174, 30);
-            this.txtLastName.TabIndex = 59;
+            this.txtLastName.TabIndex = 2;
             // 
             // lblPhoneNumber
             // 
@@ -109,7 +109,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(151, 95);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(174, 30);
-            this.txtPhoneNumber.TabIndex = 61;
+            this.txtPhoneNumber.TabIndex = 3;
             // 
             // lblSide
             // 
@@ -144,7 +144,7 @@
             this.combDishType.Name = "combDishType";
             this.combDishType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.combDishType.Size = new System.Drawing.Size(115, 24);
-            this.combDishType.TabIndex = 65;
+            this.combDishType.TabIndex = 5;
             this.combDishType.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // gUESTLISTBindingSource
@@ -172,7 +172,7 @@
             this.cbAlcohol.Location = new System.Drawing.Point(17, 224);
             this.cbAlcohol.Name = "cbAlcohol";
             this.cbAlcohol.Size = new System.Drawing.Size(76, 21);
-            this.cbAlcohol.TabIndex = 69;
+            this.cbAlcohol.TabIndex = 6;
             this.cbAlcohol.Text = "Alcohol";
             this.cbAlcohol.UseVisualStyleBackColor = true;
             // 
@@ -182,7 +182,7 @@
             this.cbBus.Location = new System.Drawing.Point(130, 224);
             this.cbBus.Name = "cbBus";
             this.cbBus.Size = new System.Drawing.Size(54, 21);
-            this.cbBus.TabIndex = 71;
+            this.cbBus.TabIndex = 7;
             this.cbBus.Text = "Bus";
             this.cbBus.UseVisualStyleBackColor = true;
             // 
@@ -193,7 +193,7 @@
             this.btnDone.Location = new System.Drawing.Point(246, 259);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(139, 45);
-            this.btnDone.TabIndex = 72;
+            this.btnDone.TabIndex = 8;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = false;
             this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
@@ -205,7 +205,7 @@
             this.btnCancel.Location = new System.Drawing.Point(17, 259);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(139, 45);
-            this.btnCancel.TabIndex = 73;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -229,7 +229,7 @@
             this.combSide.Name = "combSide";
             this.combSide.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.combSide.Size = new System.Drawing.Size(115, 24);
-            this.combSide.TabIndex = 74;
+            this.combSide.TabIndex = 4;
             // 
             // AddGuest
             // 

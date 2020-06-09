@@ -46,7 +46,7 @@
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(329, 50);
             this.lblWelcome.TabIndex = 39;
-            this.lblWelcome.Text = "Welcome Guest.\r\nPlease sign in or create account.";
+            this.lblWelcome.Text = "Welcome Guest.\r\nPlease Sign In Or Create Account.";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
             // 

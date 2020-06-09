@@ -87,41 +87,42 @@
             this.priceForAlcoholToolStripMenuItem,
             this.priceForBusToolStripMenuItem});
             this.tsmOptionToComprise.Name = "tsmOptionToComprise";
-            this.tsmOptionToComprise.Size = new System.Drawing.Size(150, 24);
-            this.tsmOptionToComprise.Text = "option to comprise";
+            this.tsmOptionToComprise.Size = new System.Drawing.Size(220, 24);
+            this.tsmOptionToComprise.Text = "Pick an item to compare prices";
+            this.tsmOptionToComprise.Click += new System.EventHandler(this.tsmOptionToComprise_Click);
             // 
             // priceForRegularToolStripMenuItem
             // 
             this.priceForRegularToolStripMenuItem.Name = "priceForRegularToolStripMenuItem";
-            this.priceForRegularToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.priceForRegularToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.priceForRegularToolStripMenuItem.Text = "Price For Regular";
             this.priceForRegularToolStripMenuItem.Click += new System.EventHandler(this.priceForRegularToolStripMenuItem_Click);
             // 
             // priceForVegeterianToolStripMenuItem
             // 
             this.priceForVegeterianToolStripMenuItem.Name = "priceForVegeterianToolStripMenuItem";
-            this.priceForVegeterianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.priceForVegeterianToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.priceForVegeterianToolStripMenuItem.Text = "Price For Vegeterian";
             this.priceForVegeterianToolStripMenuItem.Click += new System.EventHandler(this.priceForVegeterianToolStripMenuItem_Click);
             // 
             // priceForVeganToolStripMenuItem
             // 
             this.priceForVeganToolStripMenuItem.Name = "priceForVeganToolStripMenuItem";
-            this.priceForVeganToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.priceForVeganToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.priceForVeganToolStripMenuItem.Text = "Price For Vegan";
             this.priceForVeganToolStripMenuItem.Click += new System.EventHandler(this.priceForVeganToolStripMenuItem_Click);
             // 
             // priceForAlcoholToolStripMenuItem
             // 
             this.priceForAlcoholToolStripMenuItem.Name = "priceForAlcoholToolStripMenuItem";
-            this.priceForAlcoholToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.priceForAlcoholToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.priceForAlcoholToolStripMenuItem.Text = "Price For Alcohol";
             this.priceForAlcoholToolStripMenuItem.Click += new System.EventHandler(this.priceForAlcoholToolStripMenuItem_Click);
             // 
             // priceForBusToolStripMenuItem
             // 
             this.priceForBusToolStripMenuItem.Name = "priceForBusToolStripMenuItem";
-            this.priceForBusToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.priceForBusToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.priceForBusToolStripMenuItem.Text = "Price For Bus";
             this.priceForBusToolStripMenuItem.Click += new System.EventHandler(this.priceForBusToolStripMenuItem_Click);
             // 
@@ -133,6 +134,7 @@
             this.lblprice1.Size = new System.Drawing.Size(132, 32);
             this.lblprice1.TabIndex = 58;
             this.lblprice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblprice1.Click += new System.EventHandler(this.lblprice1_Click);
             // 
             // lblprice2
             // 
@@ -209,6 +211,7 @@
             this.lblComparison.TabIndex = 61;
             this.lblComparison.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblComparison.Visible = false;
+            this.lblComparison.Click += new System.EventHandler(this.lblComparison_Click);
             // 
             // btnFindMeTheTotalCheapestQuote
             // 
@@ -218,7 +221,7 @@
             this.btnFindMeTheTotalCheapestQuote.Name = "btnFindMeTheTotalCheapestQuote";
             this.btnFindMeTheTotalCheapestQuote.Size = new System.Drawing.Size(446, 37);
             this.btnFindMeTheTotalCheapestQuote.TabIndex = 1;
-            this.btnFindMeTheTotalCheapestQuote.Text = "Find me the total cheapest quote";
+            this.btnFindMeTheTotalCheapestQuote.Text = "Find Me The Cheapest Total Offer";
             this.btnFindMeTheTotalCheapestQuote.UseVisualStyleBackColor = false;
             this.btnFindMeTheTotalCheapestQuote.Click += new System.EventHandler(this.btnFindMeTheTotalCheapestQuote_Click);
             // 

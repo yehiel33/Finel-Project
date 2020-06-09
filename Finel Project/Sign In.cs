@@ -52,7 +52,7 @@ namespace Finel_Project
         //שיטה זו מוודאת הזנת פרטים כראויי ומבצעת הזדהות מול בסיס הנתונים
         {
             if (txtUserName.Text == "" || txtPassword.Text == "")
-                MessageBox.Show("please insert user name and password");//הודעת שגיאה שתקפוץ אם לא הוזנו שם משתמש וסיסמא
+                MessageBox.Show("Please insert a user name and password");//הודעת שגיאה שתקפוץ אם לא הוזנו שם משתמש וסיסמא
 
 
             bool tryFlag = false; // משתנה שבודק אם הניסיון לכתוב לבסיס הנתונים הצליח

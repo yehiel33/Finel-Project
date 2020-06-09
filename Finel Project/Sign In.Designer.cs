@@ -151,7 +151,7 @@
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(488, 36);
             this.lblRegister.TabIndex = 51;
-            this.lblRegister.Text = "Please Register To The System:";
+            this.lblRegister.Text = "Please Log In To The System:";
             this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // eVENT_OWNERSTableAdapter

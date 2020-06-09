@@ -41,7 +41,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.chartBus = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartSides = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -62,14 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.finel_ProjectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gUEST_LISTBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "סטטיסטיקה";
             // 
             // btnBack
             // 
@@ -258,7 +249,6 @@
             this.Controls.Add(this.chartSides);
             this.Controls.Add(this.chartBus);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label1);
             this.Name = "Statistics";
             this.Text = "Statistics";
             this.Load += new System.EventHandler(this.Statistics_Load);
@@ -273,8 +263,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartBus;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartSides;

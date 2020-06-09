@@ -51,7 +51,7 @@ namespace Finel_Project
             try
             {
                 lblComparison.Visible = true;
-                lblComparison.Text = "Prices of regular dish:";
+                lblComparison.Text = "";
                 conn.Open();
                 OleDbDataReader reader1 = cmd1.ExecuteReader(); // הגדרת אובייקט קריאה
                 OleDbDataReader reader2 = cmd2.ExecuteReader(); // הגדרת אובייקט קריאה
@@ -137,7 +137,7 @@ namespace Finel_Project
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally //תוספת אפשרית למבנה טריי וקאצ' מגדירה מה יקרה בכל מקרה
             {
@@ -254,7 +254,7 @@ namespace Finel_Project
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(err.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             
@@ -287,10 +287,25 @@ namespace Finel_Project
             }
             else
             {
-                MessageBox.Show("Sorry, we didn't find recommendation for you.");
+                MessageBox.Show("Sorry, we couldn't find a recommendation for you.");
             }
 
     }
+
+        private void lblComparison_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmOptionToComprise_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblprice1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
